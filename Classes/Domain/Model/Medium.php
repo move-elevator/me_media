@@ -66,6 +66,11 @@ class Medium extends AbstractEntity {
 	protected $height;
 
 	/**
+	 * @var string
+	 */
+	protected $image;
+
+	/**
 	 * @param string $description
 	 */
 	public function setDescription($description) {
@@ -219,7 +224,19 @@ class Medium extends AbstractEntity {
 		return $this->width;
 	}
 
+	/**
+	 * @param string $image
+	 */
+	public function setImage($image) {
+		$this->image = $image;
+	}
 
+	/**
+	 * @return string
+	 */
+	public function getImage() {
+		return $this->image;
+	}
 }
 
 ?>
