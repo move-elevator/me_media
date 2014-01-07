@@ -28,7 +28,9 @@ CREATE TABLE tx_memedia_domain_model_media (
 
 	width varchar(255) DEFAULT '' NOT NULL,
 	height varchar(255) DEFAULT '' NOT NULL,
-	
+
+	tx_meextsearch_is_dummy_record int(11) DEFAULT '0' NOT NULL
+
 	PRIMARY KEY (uid),
 	KEY parent (pid)
 );
