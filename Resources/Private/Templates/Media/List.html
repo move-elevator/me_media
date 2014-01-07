@@ -1,0 +1,13 @@
+<table  class="tx_mevideo" >
+        <tr>
+                 <th><f:translate key="tx_memedia_domain_model_media.title" /></th>
+                 <th> </th>
+                 <th> </th>
+         </tr>
+
+         <f:for each="{records}" as="record">
+                 <tr>
+                         <td><f:link.action action="show" arguments="{media : record}"> {record.title}</f:link.action></td>
+                 </tr>
+         </f:for>
+</table>
