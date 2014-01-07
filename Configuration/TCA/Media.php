@@ -187,26 +187,13 @@ $TCA['tx_memedia_domain_model_medium'] = array(
 			),
 			'displayCond' => 'FIELD:element_type:=:1',
 		),
-		'file_youtube' => Array(
+		'url_youtube' => Array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_medium.file_youtube',
 			'config' => Array(
 				'type' => 'input',
-				'size' => '15',
-				'max' => '255',
-				'checkbox' => '',
-				'eval' => 'trim',
-				'wizards' => array(
-					'_PADDING' => 2,
-					'link' => array(
-						'type' => 'popup',
-						'title' => 'Link',
-						'icon' => 'link_popup.gif',
-						'script' => 'browse_links.php?mode=wizard',
-						'JSopenParams' => 'height=300,width=500,status=0,menubar=0,scrollbars=1'
-					)
-				),
-				'eval' => 'required',
+				'size' => '30',
+				'eval' => 'required,trim',
 			),
 			'displayCond' => 'FIELD:element_type:=:2',
 		),

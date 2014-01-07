@@ -48,7 +48,7 @@ class Medium extends AbstractEntity {
 	/**
 	 * @var string
 	 */
-	protected $fileYoutube;
+	protected $urlYoutube;
 
 	/**
 	 * @var string
@@ -169,17 +169,17 @@ class Medium extends AbstractEntity {
 	}
 
 	/**
-	 * @param string $fileYoutube
+	 * @param string $urlYoutube
 	 */
-	public function setFileYoutube($fileYoutube) {
-		$this->fileYoutube = $fileYoutube;
+	public function setUrlYoutube($urlYoutube) {
+		$this->urlYoutube = $urlYoutube;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getFileYoutube() {
-		return $this->fileYoutube;
+	public function getUrlYoutube() {
+		return $this->urlYoutube;
 	}
 
 	/**

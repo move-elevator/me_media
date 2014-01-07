@@ -27,6 +27,7 @@ $TCA['tx_memedia_domain_model_media'] = array(
             'disabled' => 'hidden',
             'starttime' => 'starttime',
             'endtime' => 'endtime',
+			'fe_group' => 'fe_group',
         ),
         'thumbnail' => 'images',
         'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Media.php',
