@@ -1,0 +1,22 @@
+config.tx_extbase{
+    persistence {
+        classes {
+            MoveElevator\MeMedia\Domain\Model\Medium {
+                mapping {
+                    tableName = tx_memedia_domain_model_medium
+                    columns {
+                        element_type.mapOnProperty = elementType
+                        file_mp4.mapOnProperty = fileMp4
+                        file_webm.mapOnProperty = fileWebm
+                        file_ogv.mapOnProperty = fileOgv
+                        file_stream.mapOnProperty = fileStream
+                        file_youtube.mapOnProperty = fileYoutube
+                        file_audio.mapOnProperty = fileAudio
+                        element_type.mapOnProperty = fileType
+
+                    }
+                }
+            }
+        }
+    }
+}
