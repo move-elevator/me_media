@@ -3,59 +3,66 @@
 	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2013-01-11T10:49:30Z" product-name="me_media">
 		<header/>
 		<body>
-			<trans-unit id="tx_memedia_domain_model_medium">
+			<trans-unit id="tx_memedia_domain_model_media">
 				<target>Media Center entry</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.title">
+			<trans-unit id="tx_memedia_domain_model_media.title">
 				<target>Titel</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.description">
+			<trans-unit id="tx_memedia_domain_model_media.description">
 				<target>Beschreibung</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.element_type">
+			<trans-unit id="tx_memedia_domain_model_media.element_type">
 				<target>Typ</target>
 			</trans-unit>
 
-			<trans-unit id="tx_memedia_domain_model_medium.element_type.I.video">
+			<trans-unit id="tx_memedia_domain_model_media.element_type.I.video">
 				<target>Video</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.element_type.I.stream">
+			<trans-unit id="tx_memedia_domain_model_media.element_type.I.stream">
 				<target>Stream</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.element_type.I.youtube">
+			<trans-unit id="tx_memedia_domain_model_media.element_type.I.youtube">
 				<target>Youtube</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.element_type.I.audio">
+			<trans-unit id="tx_memedia_domain_model_media.element_type.I.audio">
 				<target>Audio</target>
 			</trans-unit>
 
-			<trans-unit id="tx_memedia_domain_model_medium.file_mp4">
+			<trans-unit id="tx_memedia_domain_model_media.file_mp4">
 				<target>MP4-Datei</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.file_ogv">
+			<trans-unit id="tx_memedia_domain_model_media.file_ogv">
 				<target>OGV-Datei</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.file_webm">
+			<trans-unit id="tx_memedia_domain_model_media.file_webm">
 				<target>WEBM-Datei</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.file_stream">
+			<trans-unit id="tx_memedia_domain_model_media.file_stream">
 				<target>Datei für Stream</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.file_audio">
+			<trans-unit id="tx_memedia_domain_model_media.file_audio">
 				<target>Audiodatei</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.file_youtube">
+			<trans-unit id="tx_memedia_domain_model_media.file_youtube">
 				<target>Youtube-URL</target>
 			</trans-unit>
 
-			<trans-unit id="tx_memedia_domain_model_medium.height">
+			<trans-unit id="tx_memedia_domain_model_media.height">
 				<target>Height</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.width">
+			<trans-unit id="tx_memedia_domain_model_media.width">
 				<target>Width</target>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_medium.image">
+			<trans-unit id="tx_memedia_domain_model_media.image">
 				<target>Image</target>
+			</trans-unit>
+
+			<trans-unit id="flexform.list.title">
+				<target>Plugineinstellungen</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.storagePid">
+				<target>Verzeichnis</target>
 			</trans-unit>
 		</body>
 	</file>

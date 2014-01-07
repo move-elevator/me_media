@@ -1,7 +1,7 @@
 #
 # Table structure for table 'tx_mevideostage_teaser'
 #
-CREATE TABLE tx_memedia_domain_model_medium (
+CREATE TABLE tx_memedia_domain_model_media (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 	tstamp int(11) DEFAULT '0' NOT NULL,
