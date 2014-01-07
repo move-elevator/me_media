@@ -23,7 +23,7 @@ config.tx_extbase{
 						file_webm.mapOnProperty = fileWebm
 						file_ogv.mapOnProperty = fileOgv
 						file_stream.mapOnProperty = fileStream
-						file_youtube.mapOnProperty = fileYoutube
+						url_youtube.mapOnProperty = urlYoutube
 						file_audio.mapOnProperty = fileAudio
 					}
 				}

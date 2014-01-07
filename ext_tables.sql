@@ -23,7 +23,7 @@ CREATE TABLE tx_memedia_domain_model_media (
 	file_webm tinytext NOT NULL,
 	file_ogv tinytext NOT NULL,
 	file_stream tinytext NOT NULL,
-	file_youtube tinytext NOT NULL,
+	url_youtube tinytext NOT NULL,
 	file_audio tinytext NOT NULL,
 
 	width varchar(255) DEFAULT '' NOT NULL,
