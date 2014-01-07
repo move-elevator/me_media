@@ -15,9 +15,9 @@ CREATE TABLE tx_memedia_domain_model_medium (
 	fe_group int(11) DEFAULT '0' NOT NULL,
 
 	title varchar(255) DEFAULT '' NOT NULL,
-  description varchar(255) DEFAULT '' NOT NULL,
+	description varchar(255) DEFAULT '' NOT NULL,
 	element_type int(11) DEFAULT '0' NOT NULL,
-  image tinytext NOT NULL,
+	image tinytext NOT NULL,
 
 	file_mp4 tinytext NOT NULL,
 	file_webm tinytext NOT NULL,
@@ -26,8 +26,8 @@ CREATE TABLE tx_memedia_domain_model_medium (
 	file_youtube tinytext NOT NULL,
 	file_audio tinytext NOT NULL,
 
-  width varchar(255) DEFAULT '' NOT NULL,
-  height varchar(255) DEFAULT '' NOT NULL,
+	width varchar(255) DEFAULT '' NOT NULL,
+	height varchar(255) DEFAULT '' NOT NULL,
 	
 	PRIMARY KEY (uid),
 	KEY parent (pid)
