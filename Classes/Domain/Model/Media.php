@@ -5,11 +5,11 @@ namespace MoveElevator\MeMedia\Domain\Model;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /**
- * Class Medium
+ * Class Media
  *
  * @package MoveElevator\MeMedia\Domain\Model
  */
-class Medium extends AbstractEntity {
+class Media extends AbstractEntity {
 	/**
 	 * @var string
 	 */

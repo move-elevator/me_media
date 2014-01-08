@@ -44,7 +44,7 @@
 			<trans-unit id="tx_memedia_domain_model_media.file_audio">
 				<source>Audiofile</source>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.file_youtube">
+			<trans-unit id="tx_memedia_domain_model_media.url_youtube">
 				<source>Youtube-URL</source>
 			</trans-unit>
 

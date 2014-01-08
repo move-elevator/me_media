@@ -16,20 +16,22 @@ CREATE TABLE tx_memedia_domain_model_media (
 
 	title varchar(255) DEFAULT '' NOT NULL,
 	description varchar(255) DEFAULT '' NOT NULL,
-	element_type int(11) DEFAULT '0' NOT NULL,
+	type varchar(20) DEFAULT '' NOT NULL,
 	image tinytext NOT NULL,
 
 	file_mp4 tinytext NOT NULL,
 	file_webm tinytext NOT NULL,
 	file_ogv tinytext NOT NULL,
 	file_stream tinytext NOT NULL,
-	url_youtube tinytext NOT NULL,
 	file_audio tinytext NOT NULL,
+
+	external_stream_provider varchar(50) DEFAULT '' NOT NULL,
+	external_stream_url tinytext NOT NULL,
 
 	width varchar(255) DEFAULT '' NOT NULL,
 	height varchar(255) DEFAULT '' NOT NULL,
 
-	tx_meextsearch_is_dummy_record int(11) DEFAULT '0' NOT NULL
+	is_dummy_record int(11) DEFAULT '0' NOT NULL
 
 	PRIMARY KEY (uid),
 	KEY parent (pid)
