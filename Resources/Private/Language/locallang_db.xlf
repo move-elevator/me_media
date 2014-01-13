@@ -72,6 +72,9 @@
 			<trans-unit id="flexform.list.storagePid">
 				<source>Sysfolder</source>
 			</trans-unit>
+			<trans-unit id="flexform.list.showPid">
+				<source>Detailpage</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

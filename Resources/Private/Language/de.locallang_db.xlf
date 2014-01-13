@@ -72,6 +72,9 @@
 			<trans-unit id="flexform.list.storagePid">
 				<target>Verzeichnis</target>
 			</trans-unit>
+			<trans-unit id="flexform.list.showPid">
+				<target>Detailseite</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
