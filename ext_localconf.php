@@ -12,6 +12,14 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('extbase')) {
 	);
 }
 
+if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('extbase')) {
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+		'MoveElevator.' . $_EXTKEY, 'Show', // name
+		array('Media' => 'show'), // possible
+		array() // non-cached
+	);
+}
+
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['tx_memedia_domain_model_media'][0] = array (
         'fList' => 'title',
         'icon' => TRUE
