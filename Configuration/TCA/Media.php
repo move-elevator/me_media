@@ -164,7 +164,7 @@ $TCA['tx_memedia_domain_model_media'] = array(
 						),
 						'gif,png,jpeg,jpg'
 					),
-			'displayCond' => 'FIELD:tx_extbase_type:IN:MoveElevator\MeMedia\Domain\Model\Media\Movie\Video,MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream,MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream',
+			'displayCond' => 'FIELD:tx_extbase_type:IN:MoveElevator\MeMedia\Domain\Model\Media\Movie\Video,MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream',
 		),
 		'width' => Array(
 			'exclude' => 1,
