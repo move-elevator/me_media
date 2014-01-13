@@ -4,11 +4,19 @@
                  <th> </th>
                  <th> </th>
          </tr>
-
          <f:for each="{records}" as="record">
-                 <tr>
-                     <f:debug>{record}</f:debug>
-                     <td><f:link.action action="show" arguments="{media : record}"> {record.title}</f:link.action></td>
-                 </tr>
+                <f:debug>{record}</f:debug>
+                <tr>
+                     <td>
+                         <f:if condition="{settings.showPid}">
+                             <f:then>
+                                 <f:link.page additionalParams="{tx_memedia_show:{media: record}}" pageUid="{settings.showPid}">{record.title}</f:link.page>
+                             </f:then>
+                             <f:else>
+                                 <f:link.action action="show" arguments="{media : record}"> {record.title}</f:link.action>
+                             </f:else>
+                         </f:if>
+                     </td>
+                </tr>
          </f:for>
 </table>

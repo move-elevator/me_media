@@ -1,19 +1,15 @@
-<f:debug>{record.type}</f:debug>
-
-<f:if condition="{0:record.type} == {0:'Video'}">
-
+<f:if condition="{0:record.shortType} == {0:'Video'}">
+    <f:render partial="Media/Video" arguments="{record: record}" />
 </f:if>
 
-<f:if condition="{0:record.type} == {0:'InternalStream'}">
-
+<f:if condition="{0:record.shortType} == {0:'InternalStream'}">
+    <f:render partial="Media/InternalStream" arguments="{record: record}" />
 </f:if>
 
-<f:if condition="{0:record.type} == {0:'ExternalStream'}">
-
+<f:if condition="{0:record.shortType} == {0:'ExternalStream'}">
+    <f:render partial="Media/ExternalStream" arguments="{record: record}" />
 </f:if>
 
-<f:if condition="{0:record.type} == {0:'Audio'}">
-    <!-- set up player container  -->
-    <a id="me-media-player-audio" style="display:block;width:648px;height:30px;"
-       href="{record.file.originalResource.publicUrl}"></a>
+<f:if condition="{0:record.shortType} == {0:'Audio'}">
+    <f:render partial="Media/Audio" arguments="{record: record}" />
 </f:if>

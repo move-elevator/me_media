@@ -1,0 +1,8 @@
+<p>{record.title}</p>
+<p>{record.description}</p>
+<p>{record.width}</p>
+<p>{record.height}</p>
+<p>{record.image.originalResource.publicUrl}</p>
+<f:for each="{record.fileList}" as="file">
+    <p>{file.originalResource.publicUrl}</p>
+</f:for>
