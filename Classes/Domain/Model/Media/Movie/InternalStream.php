@@ -2,14 +2,14 @@
 
 namespace MoveElevator\MeMedia\Domain\Model\Media\Movie;
 
-use MoveElevator\MeMedia\Domain\Model\Media\Movie as ExtendsEntity;
+use MoveElevator\MeMedia\Domain\Model\Media\Movie;
 
 /**
  * Class InternalStream
  *
  * @package MoveElevator\MeMedia\Domain\Model\Media
  */
-class InternalStream extends ExtendsEntity {
+class InternalStream extends Movie {
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference

@@ -2,12 +2,13 @@
 
 namespace MoveElevator\MeMedia\Domain\Model\Media;
 
+use MoveElevator\MeMedia\Domain\Model\Media;
 /**
  * Class Audio
  *
  * @package MoveElevator\MeMedia\Domain\Model\Media
  */
-class Audio extends \MoveElevator\MeMedia\Domain\Model\Media {
+class Audio extends Media {
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference

@@ -2,14 +2,14 @@
 
 namespace MoveElevator\MeMedia\Domain\Model\Media\Movie;
 
-use MoveElevator\MeMedia\Domain\Model\Media\Movie as ExtendsEntity;
+use MoveElevator\MeMedia\Domain\Model\Media\Movie;
 
 /**
  * Class Video
  *
  * @package MoveElevator\MeMedia\Domain\Model\Media\Movie
  */
-class Video extends ExtendsEntity {
+class Video extends Movie {
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>

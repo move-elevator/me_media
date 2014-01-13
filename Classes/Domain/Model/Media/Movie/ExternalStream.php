@@ -2,14 +2,13 @@
 
 namespace MoveElevator\MeMedia\Domain\Model\Media\Movie;
 
-use MoveElevator\MeMedia\Domain\Model\Media\Movie as ExtendsEntity;
-
+use MoveElevator\MeMedia\Domain\Model\Media\Movie;
 /**
  * Class ExternalStream
  *
  * @package MoveElevator\MeMedia\Domain\Model\Media\Movie
  */
-class ExternalStream extends ExtendsEntity {
+class ExternalStream extends Movie {
 
 	/**
 	 * @var string
