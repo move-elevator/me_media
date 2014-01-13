@@ -64,7 +64,7 @@ class Media extends AbstractEntity {
 	 * @return string
 	 */
 	public function getType() {
-		return $this->getShortType();
+		return $this->type();
 	}
 
 	/**
