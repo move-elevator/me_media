@@ -7,7 +7,8 @@
 
          <f:for each="{records}" as="record">
                  <tr>
-                         <td><f:link.action action="show" arguments="{media : record}"> {record.title}</f:link.action></td>
+                     <f:debug>{record}</f:debug>
+                     <td><f:link.action action="show" arguments="{media : record}"> {record.title}</f:link.action></td>
                  </tr>
          </f:for>
 </table>

@@ -1,3 +1,19 @@
-<f:if condition="{0:record.elementType} == {0:'2'}">
+<f:debug>{record.type}</f:debug>
 
+<f:if condition="{0:record.type} == {0:'Video'}">
+
+</f:if>
+
+<f:if condition="{0:record.type} == {0:'InternalStream'}">
+
+</f:if>
+
+<f:if condition="{0:record.type} == {0:'ExternalStream'}">
+
+</f:if>
+
+<f:if condition="{0:record.type} == {0:'Audio'}">
+    <!-- set up player container  -->
+    <a id="me-media-player-audio" style="display:block;width:648px;height:30px;"
+       href="{record.file.originalResource.publicUrl}"></a>
 </f:if>
