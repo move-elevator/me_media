@@ -1,33 +1,70 @@
 # change added JS / CSS files
 page {
 	includeCSS {
-		flowplayerCss = EXT:me_media/Resources/Public/JavaScript/Libs/Flowplayer/css/minimalist.css
+		flowplayerCss = EXT:me_media/Resources/Public/Flowplayer/css/minimalist.css
 	}
 
 	includeJSFooter {
 		# flowplayer depends on jQuery 1.7.1+ (for now)
-		# flowplayerJquery = EXT:me_media/Resources/Public/JavaScript/Libs/jquery.min.js
-		flowplayerJs = EXT:me_media/Resources/Public/JavaScript/Libs/Flowplayer/js/flowplayer.min.js
+		# flowplayerJquery = EXT:me_media/Resources/Public/JavaScript/jquery.min.js
+		flowplayerJs = EXT:me_media/Resources/Public/Libs/Flowplayer/js/flowplayer.min.js
+		flowplayerAudioJs = EXT:me_media/Resources/Public/Libs/Flowplayer/js/flowplayer.audio.js
 	}
 }
 
-config.tx_extbase{
-	persistence {
-		classes {
-			MoveElevator\MeMedia\Domain\Model\Media {
+config.tx_extbase {
+    persistence {
+        classes {
+            MoveElevator\MeMedia\Domain\Model\Media {
+                subclasses {
+                    MoveElevator\MeMedia\Domain\Model\Media\Audio = MoveElevator\MeMedia\Domain\Model\Media\Audio
+                    MoveElevator\MeMedia\Domain\Model\Media\Movie\Video = MoveElevator\MeMedia\Domain\Model\Media\Movie\Video
+                    MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream = MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream
+                    MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream = MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream
+                }
+				mapping {
+					columns {
+						tx_extbase_type.mapOnProperty = type
+					}
+				}
+            }
+            MoveElevator\MeMedia\Domain\Model\Media\Audio {
+                mapping {
+                    tableName = tx_memedia_domain_model_media
+                    recordType = MoveElevator\MeMedia\Domain\Model\Media\Audio
+					columns {
+						file_audio.mapOnProperty = file
+					}
+                }
+            }
+			MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream {
 				mapping {
 					tableName = tx_memedia_domain_model_media
+					recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream
 					columns {
-						element_type.mapOnProperty = elementType
-						file_mp4.mapOnProperty = fileMp4
-						file_webm.mapOnProperty = fileWebm
-						file_ogv.mapOnProperty = fileOgv
-						file_stream.mapOnProperty = fileStream
-						url_youtube.mapOnProperty = urlYoutube
-						file_audio.mapOnProperty = fileAudio
+						file_stream.mapOnProperty = file
 					}
 				}
 			}
-		}
-	}
+			MoveElevator\MeMedia\Domain\Model\Media\Movie\Video {
+				mapping {
+					tableName = tx_memedia_domain_model_media
+					recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\Video
+					columns {
+						files_video.mapOnProperty = fileList
+					}
+				}
+			}
+			MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream {
+				mapping {
+					tableName = tx_memedia_domain_model_media
+					recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream
+					columns {
+						external_stream_provider.mapOnProperty = provider
+						external_stream_id.mapOnProperty = externalId
+					}
+				}
+			}
+        }
+    }
 }

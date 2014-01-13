@@ -6,7 +6,7 @@ if (!defined('TYPO3_MODE'))
 $TCA['tx_memedia_domain_model_media'] = array(
 	'ctrl' => $TCA['tx_memedia_domain_model_media']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'hidden,starttime,endtime,fe_group,title,element_type'
+		'showRecordFieldList' => 'hidden,starttime,endtime,fe_group,title,type'
 	),
 	'feInterface' => $TCA['tx_memedia_domain_model_media']['feInterface'],
 	'columns' => array(
@@ -79,163 +79,92 @@ $TCA['tx_memedia_domain_model_media'] = array(
 				'eval' => 'required,trim',
 			),
 		),
-		'element_type' => Array(
+		'tx_extbase_type' => Array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.element_type',
+			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.type',
 			'config' => Array(
 				'type' => 'select',
 				'items' => Array(
-					Array('LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.element_type.I.video', '0'),
-					Array('LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.element_type.I.stream', '1'),
-					Array('LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.element_type.I.youtube', '2'),
-					Array('LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.element_type.I.audio', '3'),
+					Array('LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.type.I.video', 'MoveElevator\MeMedia\Domain\Model\Media\Movie\Video'),
+					Array('LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.type.I.stream', 'MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream'),
+					Array('LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.type.I.external_stream', 'MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream'),
+					Array('LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.type.I.audio', 'MoveElevator\MeMedia\Domain\Model\Media\Audio'),
 				),
 				'size' => 1,
 				'maxitems' => 1,
 				'eval' => 'required',
+				'allowNonIdValues' => true,
+				'default' => 'MoveElevator\MeMedia\Domain\Model\Media\Movie\Video',
 			)
 		),
-		'file_mp4' => Array(
+		'files_video' => Array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.file_mp4',
-			'config' => Array(
-				'type' => 'input',
-				'size' => '15',
-				'max' => '255',
-				'checkbox' => '',
-				'eval' => 'trim',
-				'wizards' => array(
-					'_PADDING' => 2,
-					'link' => array(
-						'type' => 'popup',
-						'title' => 'Link',
-						'icon' => 'link_popup.gif',
-						'script' => 'browse_links.php?mode=wizard',
-						'JSopenParams' => 'height=300,width=500,status=0,menubar=0,scrollbars=1'
-					)
-				),
-				'eval' => 'required',
-			),
-			'displayCond' => 'FIELD:element_type:=:0',
-		),
-		'file_webm' => Array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.file_webm',
-			'config' => Array(
-				'type' => 'input',
-				'size' => '15',
-				'max' => '255',
-				'checkbox' => '',
-				'eval' => 'trim',
-				'wizards' => array(
-					'_PADDING' => 2,
-					'link' => array(
-						'type' => 'popup',
-						'title' => 'Link',
-						'icon' => 'link_popup.gif',
-						'script' => 'browse_links.php?mode=wizard',
-						'JSopenParams' => 'height=300,width=500,status=0,menubar=0,scrollbars=1'
-					)
-				),
-				'eval' => 'required',
-			),
-			'displayCond' => 'FIELD:element_type:=:0',
-		),
-		'file_ogv' => Array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.file_ogv',
-			'config' => Array(
-				'type' => 'input',
-				'size' => '15',
-				'max' => '255',
-				'checkbox' => '',
-				'eval' => 'trim',
-				'wizards' => array(
-					'_PADDING' => 2,
-					'link' => array(
-						'type' => 'popup',
-						'title' => 'Link',
-						'icon' => 'link_popup.gif',
-						'script' => 'browse_links.php?mode=wizard',
-						'JSopenParams' => 'height=300,width=500,status=0,menubar=0,scrollbars=1'
-					)
-				),
-				'eval' => 'required',
-			),
-			'displayCond' => 'FIELD:element_type:=:0',
+			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.files_video',
+			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('files', array(
+							'minitems' => 3,
+							'maxitems' => 3
+						),
+						'mp4,ogv,webm'
+					),
+			'displayCond' => 'FIELD:tx_extbase_type:=:MoveElevator\MeMedia\Domain\Model\Media\Movie\Video',
 		),
 		'file_stream' => Array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.file_stream',
+			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('files', array(
+							'minitems' => 1,
+							'maxitems' => 1
+						)
+					),
+			'displayCond' => 'FIELD:tx_extbase_type:=:MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream',
+		),
+		'external_stream_provider' => Array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.external_stream_provider',
 			'config' => Array(
-				'type' => 'input',
-				'size' => '15',
-				'max' => '255',
-				'checkbox' => '',
-				'eval' => 'trim',
-				'wizards' => array(
-					'_PADDING' => 2,
-					'link' => array(
-						'type' => 'popup',
-						'title' => 'Link',
-						'icon' => 'link_popup.gif',
-						'script' => 'browse_links.php?mode=wizard',
-						'JSopenParams' => 'height=300,width=500,status=0,menubar=0,scrollbars=1'
-					)
+				'type' => 'select',
+				'items' => Array(
+					Array('LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.external_stream_provider.I.youtube', 'youtube'),
+					Array('LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.external_stream_provider.I.vimeo', 'vimeo'),
+					Array('LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.external_stream_provider.I.myvideo', 'myvideo'),
 				),
+				'size' => 1,
+				'maxitems' => 1,
 				'eval' => 'required',
 			),
-			'displayCond' => 'FIELD:element_type:=:1',
+			'displayCond' => 'FIELD:tx_extbase_type:=:MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream',
 		),
-		'url_youtube' => Array(
+		'external_stream_id' => Array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.url_youtube',
+			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.external_stream_id',
 			'config' => Array(
 				'type' => 'input',
 				'size' => '30',
 				'eval' => 'required,trim',
 			),
-			'displayCond' => 'FIELD:element_type:=:2',
+			'displayCond' => 'FIELD:tx_extbase_type:=:MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream',
 		),
-		'file_audio' => Array(
+		'file_audio' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.file_audio',
-			'config' => Array(
-				'type' => 'input',
-				'size' => '15',
-				'max' => '255',
-				'checkbox' => '',
-				'eval' => 'trim',
-				'wizards' => array(
-					'_PADDING' => 2,
-					'link' => array(
-						'type' => 'popup',
-						'title' => 'Link',
-						'icon' => 'link_popup.gif',
-						'script' => 'browse_links.php?mode=wizard',
-						'JSopenParams' => 'height=300,width=500,status=0,menubar=0,scrollbars=1'
-					)
-				),
-				'eval' => 'required',
-			),
-			'displayCond' => 'FIELD:element_type:=:3',
+			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('file_audio', array(
+							'minitems' => 1,
+							'maxitems' => 1
+						)
+					),
+			'displayCond' => 'FIELD:tx_extbase_type:=:MoveElevator\MeMedia\Domain\Model\Media\Audio',
 		),
 		'image' => Array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.image',
-			'config' => Array(
-				'type' => 'group',
-				'internal_type' => 'file',
-				'allowed' => 'gif,png,jpeg,jpg',
-				'max_size' => 900,
-				'uploadfolder' => 'uploads/tx_memedia',
-				'show_thumbs' => 1,
-				'size' => 1,
-				'minitems' => 1,
-				'maxitems' => 1,
-				'eval' => 'required',
-			),
-			'displayCond' => 'FIELD:element_type:<:3',
+			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('image', array(
+							'minitems' => 1,
+							'maxitems' => 1,
+							'uploadfolder' => 'uploads/tx_memedia',
+						),
+						'gif,png,jpeg,jpg'
+					),
+			'displayCond' => 'FIELD:tx_extbase_type:IN:MoveElevator\MeMedia\Domain\Model\Media\Movie\Video,MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream,MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream',
 		),
 		'width' => Array(
 			'exclude' => 1,
@@ -245,7 +174,7 @@ $TCA['tx_memedia_domain_model_media'] = array(
 				'size' => '30',
 				'eval' => 'trim',
 			),
-			'displayCond' => 'FIELD:element_type:<:3',
+			'displayCond' => 'FIELD:tx_extbase_type:IN:MoveElevator\MeMedia\Domain\Model\Media\Movie\Video,MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream,MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream',
 		),
 		'height' => Array(
 			'exclude' => 1,
@@ -255,16 +184,16 @@ $TCA['tx_memedia_domain_model_media'] = array(
 				'size' => '30',
 				'eval' => 'trim',
 			),
-			'displayCond' => 'FIELD:element_type:<:3',
+			'displayCond' => 'FIELD:tx_extbase_type:IN:MoveElevator\MeMedia\Domain\Model\Media\Movie\Video,MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream,MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream',
 		),
 	),
 	'types' => array(
-		'0' => array('showitem' => 'hidden;;1;;1-1-1, title;;;;2-2-2, description, element_type;;;;3-3-3, file_mp4, file_ogv, file_webm, file_stream, url_youtube, file_audio, image, width, height'),
+		'0' => array('showitem' => 'hidden;;1;;1-1-1, title;;;;2-2-2, description, tx_extbase_type;;;;3-3-3, files_video, file_stream, external_stream_provider, external_stream_id, file_audio, image, width, height'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => 'starttime, endtime, fe_group')
 	)
 );
 
-$TCA['tx_memedia_domain_model_media']['ctrl']['requestUpdate'] .= ',element_type';
+$TCA['tx_memedia_domain_model_media']['ctrl']['requestUpdate'] .= ',type';
 ?>

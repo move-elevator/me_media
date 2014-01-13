@@ -18,6 +18,7 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('extbase')) {
 $TCA['tx_memedia_domain_model_media'] = array(
 	'ctrl' => array(
 		'title' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media',
+		'type' => 'tx_extbase_type',
 		'label' => 'title',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -34,4 +35,5 @@ $TCA['tx_memedia_domain_model_media'] = array(
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_memedia_domain_model_media.png'
 	),
 );
+
 ?>
