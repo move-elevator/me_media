@@ -12,10 +12,16 @@ use MoveElevator\MeMedia\Domain\Model\Media;
 class MediaController extends ActionController {
 
 	/**
-	 * @var MoveElevator\MeMedia\Domain\Repository\MediaRepository
+	 * @var \MoveElevator\MeMedia\Domain\Repository\MediaRepository
 	 * @inject
 	 */
 	protected $mediaRepository;
+
+	/**
+	 * @var \MoveElevator\MeMedia\Service\MediaService
+	 * @inject
+	 */
+	protected $mediaService;
 
 	/**
 	 * @return void
@@ -25,7 +31,13 @@ class MediaController extends ActionController {
 		$this->view->assign('records', $mediaList);
 	}
 
-
+	public function initializeShowAction() {
+		$requestArguments = $this->request->getArguments();
+		if (!$this->mediaService->requestHasValidMediaObject($requestArguments)) {
+			$requestArguments['media'] = NULL;
+			$this->request->setArguments($requestArguments);
+		}
+	}
 
 	/**
 	 * @param \MoveElevator\MeMedia\Domain\Model\Media $media
