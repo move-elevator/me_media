@@ -12,31 +12,25 @@
 			<trans-unit id="tx_memedia_domain_model_media.description">
 				<source>Description</source>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.element_type">
-				<source>Elementtype</source>
+			<trans-unit id="tx_memedia_domain_model_media.type">
+				<source>Type of entry</source>
 			</trans-unit>
 
-			<trans-unit id="tx_memedia_domain_model_media.element_type.I.video">
+			<trans-unit id="tx_memedia_domain_model_media.type.I.video">
 				<source>Video</source>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.element_type.I.stream">
+			<trans-unit id="tx_memedia_domain_model_media.type.I.stream">
 				<source>Stream</source>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.element_type.I.youtube">
-				<source>Youtube</source>
+			<trans-unit id="tx_memedia_domain_model_media.type.I.external_stream">
+				<source>External Stream</source>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.element_type.I.audio">
+			<trans-unit id="tx_memedia_domain_model_media.type.I.audio">
 				<source>Audio</source>
 			</trans-unit>
 
-			<trans-unit id="tx_memedia_domain_model_media.file_mp4">
-				<source>File mp4</source>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.file_ogv">
-				<source>File ogv</source>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.file_webm">
-				<source>File webm</source>
+			<trans-unit id="tx_memedia_domain_model_media.files_video">
+				<source>Video files (*.mp4, *.ogv, *.webm)</source>
 			</trans-unit>
 			<trans-unit id="tx_memedia_domain_model_media.file_stream">
 				<source>Streamfile</source>
@@ -44,8 +38,22 @@
 			<trans-unit id="tx_memedia_domain_model_media.file_audio">
 				<source>Audiofile</source>
 			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.url_youtube">
-				<source>Youtube-URL</source>
+			<trans-unit id="tx_memedia_domain_model_media.external_stream_provider">
+				<source>Stream Provider</source>
+			</trans-unit>
+
+			<trans-unit id="tx_memedia_domain_model_media.external_stream_provider.I.youtube">
+				<source>Youtube</source>
+			</trans-unit>
+			<trans-unit id="tx_memedia_domain_model_media.external_stream_provider.I.vimeo">
+				<source>Vimeo</source>
+			</trans-unit>
+			<trans-unit id="tx_memedia_domain_model_media.external_stream_provider.I.myvideo">
+				<source>My Video</source>
+			</trans-unit>
+
+			<trans-unit id="tx_memedia_domain_model_media.external_stream_id">
+				<source>Stream ID</source>
 			</trans-unit>
 
 			<trans-unit id="tx_memedia_domain_model_media.height">
