@@ -16,17 +16,15 @@ CREATE TABLE tx_memedia_domain_model_media (
 
 	title varchar(255) DEFAULT '' NOT NULL,
 	description varchar(255) DEFAULT '' NOT NULL,
-	type varchar(20) DEFAULT '' NOT NULL,
+	tx_extbase_type varchar(255) DEFAULT '' NOT NULL,
 	image tinytext NOT NULL,
 
-	file_mp4 tinytext NOT NULL,
-	file_webm tinytext NOT NULL,
-	file_ogv tinytext NOT NULL,
+	files_video tinytext NOT NULL,
 	file_stream tinytext NOT NULL,
 	file_audio tinytext NOT NULL,
 
 	external_stream_provider varchar(50) DEFAULT '' NOT NULL,
-	external_stream_url tinytext NOT NULL,
+	external_stream_id tinytext NOT NULL,
 
 	width varchar(255) DEFAULT '' NOT NULL,
 	height varchar(255) DEFAULT '' NOT NULL,
