@@ -1,17 +1,3 @@
-# change added JS / CSS files
-page {
-	includeCSS {
-		flowplayerCss = EXT:me_media/Resources/Public/Flowplayer/css/minimalist.css
-	}
-
-	includeJSFooter {
-		# flowplayer depends on jQuery 1.7.1+ (for now)
-		# flowplayerJquery = EXT:me_media/Resources/Public/JavaScript/jquery.min.js
-		flowplayerJs = EXT:me_media/Resources/Public/Libs/Flowplayer/js/flowplayer.min.js
-		flowplayerAudioJs = EXT:me_media/Resources/Public/Libs/Flowplayer/js/flowplayer.audio.js
-	}
-}
-
 config.tx_extbase {
     persistence {
         classes {
