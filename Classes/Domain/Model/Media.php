@@ -21,54 +21,9 @@ class Media extends AbstractEntity {
 	protected $description;
 
 	/**
-	 * @var int
-	 */
-	protected $elementType;
-
-	/**
 	 * @var string
 	 */
-	protected $fileMp4;
-
-	/**
-	 * @var string
-	 */
-	protected $fileWebm;
-
-	/**
-	 * @var string
-	 */
-	protected $fileOgv;
-
-	/**
-	 * @var string
-	 */
-	protected $fileStream;
-
-	/**
-	 * @var string
-	 */
-	protected $urlYoutube;
-
-	/**
-	 * @var string
-	 */
-	protected $fileAudio;
-
-	/**
-	 * @var string
-	 */
-	protected $width;
-
-	/**
-	 * @var string
-	 */
-	protected $height;
-
-	/**
-	 * @var string
-	 */
-	protected $image;
+	protected $type;
 
 	/**
 	 * @param string $description
@@ -82,118 +37,6 @@ class Media extends AbstractEntity {
 	 */
 	public function getDescription() {
 		return $this->description;
-	}
-
-	/**
-	 * @param int $elementType
-	 */
-	public function setElementType($elementType) {
-		$this->elementType = $elementType;
-	}
-
-	/**
-	 * @return int
-	 */
-	public function getElementType() {
-		return $this->elementType;
-	}
-
-	/**
-	 * @param string $fileAudio
-	 */
-	public function setFileAudio($fileAudio) {
-		$this->fileAudio = $fileAudio;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getFileAudio() {
-		return $this->fileAudio;
-	}
-
-	/**
-	 * @param string $fileMp4
-	 */
-	public function setFileMp4($fileMp4) {
-		$this->fileMp4 = $fileMp4;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getFileMp4() {
-		return $this->fileMp4;
-	}
-
-	/**
-	 * @param string $fileOgv
-	 */
-	public function setFileOgv($fileOgv) {
-		$this->fileOgv = $fileOgv;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getFileOgv() {
-		return $this->fileOgv;
-	}
-
-	/**
-	 * @param string $fileStream
-	 */
-	public function setFileStream($fileStream) {
-		$this->fileStream = $fileStream;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getFileStream() {
-		return $this->fileStream;
-	}
-
-	/**
-	 * @param string $fileWebm
-	 */
-	public function setFileWebm($fileWebm) {
-		$this->fileWebm = $fileWebm;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getFileWebm() {
-		return $this->fileWebm;
-	}
-
-	/**
-	 * @param string $urlYoutube
-	 */
-	public function setUrlYoutube($urlYoutube) {
-		$this->urlYoutube = $urlYoutube;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getUrlYoutube() {
-		return $this->urlYoutube;
-	}
-
-	/**
-	 * @param string $height
-	 */
-	public function setHeight($height) {
-		$this->height = $height;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getHeight() {
-		return $this->height;
 	}
 
 	/**
@@ -211,31 +54,26 @@ class Media extends AbstractEntity {
 	}
 
 	/**
-	 * @param string $width
+	 * @param string $type
 	 */
-	public function setWidth($width) {
-		$this->width = $width;
+	public function setType($type) {
+		$this->type = $type;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getWidth() {
-		return $this->width;
-	}
-
-	/**
-	 * @param string $image
-	 */
-	public function setImage($image) {
-		$this->image = $image;
+	public function getType() {
+		return $this->getShortType();
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getImage() {
-		return $this->image;
+	public function getShortType() {
+		$typeNamespaceList = explode('\\', $this->type);
+
+		return (string) end($typeNamespaceList);
 	}
 }
 
