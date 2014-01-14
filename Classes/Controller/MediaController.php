@@ -16,7 +16,7 @@ class MediaController extends ActionController {
 	 * @inject
 	 */
 	protected $mediaRepository;
-k
+
 	/**
 	 * @return void
 	 */
