@@ -37,11 +37,16 @@ class MediaController extends ActionController {
 	}
 
 	/**
-	 * @param $mediaId
+	 * @param int $mediaId
 	 * @return \MoveElevator\MeMedia\Domain\Model\Media
 	 */
 	protected function getMedia($mediaId) {
-		$mediaId = (intval($mediaId) === 0) ? intval($this->settings['mediaId']) : intval($mediaId);
+
+		if (intval($mediaId) === 0) {
+			$mediaId = intval($this->settings['mediaId']);
+		} else {
+			$mediaId = intval($mediaId);
+		}
 
 		return $this->mediaRepository->findByUid($mediaId);
 	}
