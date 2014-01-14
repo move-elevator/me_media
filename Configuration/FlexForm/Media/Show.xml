@@ -7,13 +7,25 @@
         <sDEF>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:flexform.list.title</sheetTitle>
+                    <sheetTitle>LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:flexform.show.title</sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el>
-                    <settings.storagePid>
+                    <settings.mediaId>
                         <TCEforms>
-                            <label>LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:flexform.list.storagePid</label>
+                            <label>LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:flexform.show.mediaId</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>tx_memedia_domain_model_media</allowed>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </settings.mediaId>
+                    <settings.listPid>
+                        <TCEforms>
+                            <label>LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:flexform.show.listPid</label>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
@@ -22,19 +34,7 @@
                                 <maxitems>1</maxitems>
                             </config>
                         </TCEforms>
-                    </settings.storagePid>
-                    <settings.showPid>
-                        <TCEforms>
-                            <label>LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:flexform.list.showPid</label>
-                            <config>
-                                <type>group</type>
-                                <internal_type>db</internal_type>
-                                <allowed>pages</allowed>
-                                <size>1</size>
-                                <maxitems>1</maxitems>
-                            </config>
-                        </TCEforms>
-                    </settings.showPid>
+                    </settings.listPid>
                 </el>
             </ROOT>
         </sDEF>

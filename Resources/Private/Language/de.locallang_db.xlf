@@ -75,6 +75,16 @@
 			<trans-unit id="flexform.list.showPid">
 				<target>Detailseite</target>
 			</trans-unit>
+
+			<trans-unit id="flexform.show.title">
+				<target>Plugineinstellungen</target>
+			</trans-unit>
+			<trans-unit id="flexform.show.mediaId">
+				<target>Media Center Datensatz</target>
+			</trans-unit>
+			<trans-unit id="flexform.show.listPid">
+				<target>Listenansicht</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

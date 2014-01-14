@@ -16,13 +16,7 @@ class MediaController extends ActionController {
 	 * @inject
 	 */
 	protected $mediaRepository;
-
-	/**
-	 * @var \MoveElevator\MeMedia\Service\MediaService
-	 * @inject
-	 */
-	protected $mediaService;
-
+k
 	/**
 	 * @return void
 	 */
@@ -31,21 +25,25 @@ class MediaController extends ActionController {
 		$this->view->assign('records', $mediaList);
 	}
 
-	public function initializeShowAction() {
-		$requestArguments = $this->request->getArguments();
-		if (!$this->mediaService->requestHasValidMediaObject($requestArguments)) {
-			$requestArguments['media'] = NULL;
-			$this->request->setArguments($requestArguments);
+	/**
+	 * @param int $media
+	 */
+	public function showAction($media = NULL) {
+		$mediaRecord = $this->getMedia($media);
+
+		if ($mediaRecord instanceof Media) {
+			$this->view->assign('record', $mediaRecord);
 		}
 	}
 
 	/**
-	 * @param \MoveElevator\MeMedia\Domain\Model\Media $media
+	 * @param $mediaId
+	 * @return \MoveElevator\MeMedia\Domain\Model\Media
 	 */
-	public function showAction($media = NULL) {
-		if ($media instanceof Media) {
-			$this->view->assign('record', $media);
-		}
+	protected function getMedia($mediaId) {
+		$mediaId = (intval($mediaId) === 0) ? intval($this->settings['mediaId']) : intval($mediaId);
+
+		return $this->mediaRepository->findByUid($mediaId);
 	}
 }
 
