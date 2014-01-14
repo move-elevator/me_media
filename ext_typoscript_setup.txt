@@ -8,49 +8,49 @@ config.tx_extbase {
                     MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream = MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream
                     MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream = MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream
                 }
-				mapping {
-					columns {
-						tx_extbase_type.mapOnProperty = type
-					}
-				}
+                mapping {
+                    columns {
+                        tx_extbase_type.mapOnProperty = type
+                    }
+                }
             }
             MoveElevator\MeMedia\Domain\Model\Media\Audio {
                 mapping {
                     tableName = tx_memedia_domain_model_media
                     recordType = MoveElevator\MeMedia\Domain\Model\Media\Audio
-					columns {
-						file_audio.mapOnProperty = file
-					}
+                    columns {
+                        file_audio.mapOnProperty = file
+                    }
                 }
             }
-			MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream {
-				mapping {
-					tableName = tx_memedia_domain_model_media
-					recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream
-					columns {
-						file_stream.mapOnProperty = file
-					}
-				}
-			}
-			MoveElevator\MeMedia\Domain\Model\Media\Movie\Video {
-				mapping {
-					tableName = tx_memedia_domain_model_media
-					recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\Video
-					columns {
-						files_video.mapOnProperty = fileList
-					}
-				}
-			}
-			MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream {
-				mapping {
-					tableName = tx_memedia_domain_model_media
-					recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream
-					columns {
-						external_stream_provider.mapOnProperty = provider
-						external_stream_id.mapOnProperty = externalId
-					}
-				}
-			}
+            MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream {
+                mapping {
+                    tableName = tx_memedia_domain_model_media
+                    recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream
+                    columns {
+                        file_stream.mapOnProperty = file
+                    }
+                }
+            }
+            MoveElevator\MeMedia\Domain\Model\Media\Movie\Video {
+                mapping {
+                    tableName = tx_memedia_domain_model_media
+                    recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\Video
+                    columns {
+                        files_video.mapOnProperty = fileList
+                    }
+                }
+            }
+            MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream {
+                mapping {
+                    tableName = tx_memedia_domain_model_media
+                    recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream
+                    columns {
+                        external_stream_provider.mapOnProperty = provider
+                        external_stream_id.mapOnProperty = externalId
+                    }
+                }
+            }
         }
     }
 }

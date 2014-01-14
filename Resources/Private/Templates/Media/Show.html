@@ -1,15 +1,19 @@
-<f:if condition="{0:record.shortType} == {0:'Video'}">
-    <f:render partial="Media/Video" arguments="{record: record}" />
-</f:if>
+<f:layout name="Default"/>
 
-<f:if condition="{0:record.shortType} == {0:'InternalStream'}">
-    <f:render partial="Media/InternalStream" arguments="{record: record}" />
-</f:if>
+<f:section name="main">
+    <f:if condition="{0:record.shortType} == {0:'Video'}">
+        <f:render partial="Media/Video" arguments="{record: record}" />
+    </f:if>
 
-<f:if condition="{0:record.shortType} == {0:'ExternalStream'}">
-    <f:render partial="Media/ExternalStream" arguments="{record: record}" />
-</f:if>
+    <f:if condition="{0:record.shortType} == {0:'InternalStream'}">
+        <f:render partial="Media/InternalStream" arguments="{record: record}" />
+    </f:if>
 
-<f:if condition="{0:record.shortType} == {0:'Audio'}">
-    <f:render partial="Media/Audio" arguments="{record: record}" />
-</f:if>
+    <f:if condition="{0:record.shortType} == {0:'ExternalStream'}">
+        <f:render partial="Media/ExternalStream" arguments="{record: record}" />
+    </f:if>
+
+    <f:if condition="{0:record.shortType} == {0:'Audio'}">
+        <f:render partial="Media/Audio" arguments="{record: record}" />
+    </f:if>
+</f:section>

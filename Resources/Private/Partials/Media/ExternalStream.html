@@ -1,5 +1,10 @@
-<p>{record.title}</p>
-<p>{record.description}</p>
+<f:if condition="{record.title}">
+    <h2>{record.title}</h2>
+</f:if>
+
+<f:if condition="{record.description}">
+    <p>{record.description}</p>
+</f:if>
 
 <f:if condition="{0:record.provider} == {0:'youtube'}">
     <f:render partial="Media/ExternalStream/Youtube" arguments="{record: record}" />

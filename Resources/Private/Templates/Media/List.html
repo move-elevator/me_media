@@ -1,21 +1,18 @@
-<table  class="tx_memedia" >
-        <tr>
-                 <th><f:translate key="tx_memedia_domain_model_media.title" /></th>
-                 <th> </th>
-                 <th> </th>
-         </tr>
-         <f:for each="{records}" as="record">
-                <tr>
-                     <td>
-                         <f:if condition="{settings.showPid}">
-                             <f:then>
-                                 <f:link.page additionalParams="{tx_memedia_show:{media: record}}" pageUid="{settings.showPid}">{record.title}</f:link.page>
-                             </f:then>
-                             <f:else>
-                                 <f:link.action action="show" arguments="{media : record}"> {record.title}</f:link.action>
-                             </f:else>
-                         </f:if>
-                     </td>
-                </tr>
-         </f:for>
-</table>
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <h2><f:translate key="tx_memedia_domain_model_media.title" /></h2>
+
+    <div class="list-group">
+        <f:for each="{records}" as="record">
+            <f:if condition="{settings.showPid}">
+                <f:then>
+                    <f:link.page additionalParams="{tx_memedia_show:{media: record}}" pageUid="{settings.showPid}" class="list-group-item" title="{record.title}">{record.title}</f:link.page>
+                </f:then>
+                <f:else>
+                    <f:link.action action="show" arguments="{media : record}" class="list-group-item" title="{record.title}">{record.title}</f:link.action>
+                </f:else>
+            </f:if>
+        </f:for>
+    </div>
+</f:section>

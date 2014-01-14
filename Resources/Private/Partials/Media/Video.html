@@ -1,8 +1,12 @@
-<p>{record.title}</p>
-<p>{record.description}</p>
-<p>{record.width}</p>
-<p>{record.height}</p>
-<p>{record.image.originalResource.publicUrl}</p>
-<f:for each="{record.fileList}" as="file">
-    <p>{file.originalResource.publicUrl}</p>
-</f:for>
+<f:if condition="{record.title}">
+    <h2>{record.title}</h2>
+</f:if>
+
+<div class="flowplayer">
+    <video width="{record.width}" height="{record.height}" preload="auto" poster="{record.image.originalResource.publicUrl}" controls>
+        <f:for each="{record.fileList}" as="file">
+            <source src="{file.originalResource.publicUrl}" type="{file.originalResource.originalFile.properties.mime_type}">
+        </f:for>
+        {record.description}
+    </video>
+</div>
