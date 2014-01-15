@@ -57,13 +57,13 @@
 			</trans-unit>
 
 			<trans-unit id="tx_memedia_domain_model_media.height">
-				<target>Height</target>
+				<target>Höhe</target>
 			</trans-unit>
 			<trans-unit id="tx_memedia_domain_model_media.width">
 				<target>Breite</target>
 			</trans-unit>
 			<trans-unit id="tx_memedia_domain_model_media.image">
-				<target>Höhe</target>
+				<target>Bild</target>
 			</trans-unit>
 
 			<trans-unit id="flexform.list.title">
