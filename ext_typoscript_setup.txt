@@ -1,7 +1,7 @@
 page {
     # Add CSS
     includeCSS {
-        flowplayer-minimalist = EXT:me_media/Resources/Public/js/libs/flowplayer-5.4.6/skin/minimalist.css
+        flowplayer-layout = EXT:me_media/Resources/Public/js/libs/flowplayer-5.4.6/skin/minimalist.css
     }
 
     # Add JS
