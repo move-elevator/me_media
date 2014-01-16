@@ -2,11 +2,14 @@
     <h2>{record.title}</h2>
 </f:if>
 
+<f:if condition="{record.description}">
+    <p>{record.description}</p>
+</f:if>
+
 <div class="flowplayer">
     <video width="{record.width}" height="{record.height}" preload="auto" poster="{record.image.originalResource.publicUrl}" controls>
         <f:for each="{record.fileList}" as="file">
             <source src="{file.originalResource.publicUrl}" type="{file.originalResource.originalFile.properties.mime_type}">
         </f:for>
-        {record.description}
     </video>
 </div>
