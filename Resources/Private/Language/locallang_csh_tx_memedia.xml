@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>CSH labels for fields</description>
+        <type>CSH</type>
+        <csh_table></csh_table>
+        <fileId>EXT:me_media/locallang_csh_tx_memedia.xml</fileId>
+        <labelContext type="array"></labelContext>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="external_stream_id.description">Id in streaming portal:
+                <![CDATA[<br />]]>
+                youtube.com/watch?v=<![CDATA[<strong>08k7dLoE8h0</strong>]]>
+                www.vimeo.com/<![CDATA[<strong>123456</strong>]]>
+                www.myvideo.de/watch/<![CDATA[<strong>1234567</strong>]]>/...
+            </label>
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="external_stream_id.description">Id des Videos im Portal des jeweiligen Streamanbieters:
+                <![CDATA[<br />]]>
+                youtube.com/watch?v=<![CDATA[<strong>08k7dLoE8h0</strong>]]>
+                www.vimeo.com/<![CDATA[<strong>123456</strong>]]>
+                www.myvideo.de/watch/<![CDATA[<strong>1234567</strong>]]>/...
+            </label>
+        </languageKey>
+    </data>
+</T3locallang>

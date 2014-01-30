@@ -39,7 +39,7 @@
 				<target>Audiodatei</target>
 			</trans-unit>
 			<trans-unit id="tx_memedia_domain_model_media.external_stream_provider">
-				<target>Stream Provider</target>
+				<target>Video-Plattform</target>
 			</trans-unit>
 
 			<trans-unit id="tx_memedia_domain_model_media.external_stream_provider.I.youtube">
