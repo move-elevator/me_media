@@ -53,7 +53,7 @@
 			</trans-unit>
 
 			<trans-unit id="tx_memedia_domain_model_media.external_stream_id">
-				<target>Stream ID</target>
+				<target>Video-ID</target>
 			</trans-unit>
 
 			<trans-unit id="tx_memedia_domain_model_media.height">
@@ -77,7 +77,7 @@
 			</trans-unit>
 
 			<trans-unit id="flexform.show.title">
-				<target>Plugineinstellungen</target>
+				<target>Einstellungen</target>
 			</trans-unit>
 			<trans-unit id="flexform.show.mediaId">
 				<target>Media Center Datensatz</target>

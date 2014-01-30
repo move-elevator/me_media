@@ -77,7 +77,7 @@
 			</trans-unit>
 
 			<trans-unit id="flexform.show.title">
-				<source>Pluginsettings</source>
+				<source>Settings</source>
 			</trans-unit>
 			<trans-unit id="flexform.show.mediaId">
 				<source>Media Center Entry</source>

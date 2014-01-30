@@ -44,8 +44,6 @@ class MediaController extends ActionController {
 
 		if (intval($mediaId) === 0) {
 			$mediaId = intval($this->settings['mediaId']);
-		} else {
-			$mediaId = intval($mediaId);
 		}
 
 		return $this->mediaRepository->findByUid($mediaId);
