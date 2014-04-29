@@ -2,6 +2,7 @@
 
 namespace MoveElevator\MeMedia\Domain\Model\Media;
 
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use MoveElevator\MeMedia\Domain\Model\Media;
 
 /**
@@ -10,30 +11,31 @@ use MoveElevator\MeMedia\Domain\Model\Media;
  * @package MoveElevator\MeMedia\Domain\Model\Media
  */
 class Movie extends Media {
+
 	/**
 	 * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
 	 */
 	protected $image;
 
 	/**
-	 * @var string
+	 * @var int
 	 */
 	protected $width;
 
 	/**
-	 * @var string
+	 * @var int
 	 */
 	protected $height;
 
 	/**
-	 * @param string $height
+	 * @param int $height
 	 */
 	public function setHeight($height) {
 		$this->height = $height;
 	}
 
 	/**
-	 * @return string
+	 * @return int
 	 */
 	public function getHeight() {
 		return $this->height;
@@ -42,7 +44,7 @@ class Movie extends Media {
 	/**
 	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
 	 */
-	public function setImage($image) {
+	public function setImage(FileReference $image) {
 		$this->image = $image;
 	}
 
@@ -54,14 +56,14 @@ class Movie extends Media {
 	}
 
 	/**
-	 * @param string $width
+	 * @param int $width
 	 */
 	public function setWidth($width) {
 		$this->width = $width;
 	}
 
 	/**
-	 * @return string
+	 * @return int
 	 */
 	public function getWidth() {
 		return $this->width;

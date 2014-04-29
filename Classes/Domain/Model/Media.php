@@ -10,6 +10,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
  * @package MoveElevator\MeMedia\Domain\Model
  */
 class Media extends AbstractEntity {
+
 	/**
 	 * @var string
 	 */

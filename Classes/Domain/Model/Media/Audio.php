@@ -2,7 +2,9 @@
 
 namespace MoveElevator\MeMedia\Domain\Model\Media;
 
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use MoveElevator\MeMedia\Domain\Model\Media;
+
 /**
  * Class Audio
  *
@@ -18,7 +20,7 @@ class Audio extends Media {
 	/**
 	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $file
 	 */
-	public function setFile($file) {
+	public function setFile(FileReference $file) {
 		$this->file = $file;
 	}
 

@@ -3,6 +3,7 @@
 namespace MoveElevator\MeMedia\Domain\Model\Media\Movie;
 
 use MoveElevator\MeMedia\Domain\Model\Media\Movie;
+
 /**
  * Class ExternalStream
  *
