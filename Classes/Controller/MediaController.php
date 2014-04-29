@@ -4,6 +4,7 @@ namespace MoveElevator\MeMedia\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use MoveElevator\MeMedia\Domain\Model\Media;
+
 /**
  * Class MediaController
  *
@@ -40,7 +41,7 @@ class MediaController extends ActionController {
 	 * @param int $mediaId
 	 * @return \MoveElevator\MeMedia\Domain\Model\Media
 	 */
-	protected function getMedia($mediaId) {
+	protected function getMedia(Media $mediaId) {
 
 		if (intval($mediaId) === 0) {
 			$mediaId = intval($this->settings['mediaId']);
