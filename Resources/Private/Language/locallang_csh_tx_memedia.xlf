@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2011-10-17T20:22:32Z" product-name="me_media">
+        <header/>
+        <body>
+            <trans-unit id="external_stream_id.description" xml:space="preserve">
+				<source>
+					Id in streaming portal:
+					<![CDATA[<br />
+						<div style="white-space:nowrap; font-size: 9px;">
+							youtube.com/watch?v=<strong>08k7dLoE8h0</strong><br />
+							vimeo.com/<strong>123456</strong><br />
+							myvideo.de/watch/<strong>1234567</strong>/...
+						</div>
+					]]>
+                </source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

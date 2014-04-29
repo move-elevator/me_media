@@ -21,7 +21,7 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('extbase')) {
 	$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignatureShow] = 'pi_flexform';
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignatureShow, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForm/Media/Show.xml');
 
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_memedia_domain_model_media','EXT:me_media/Resources/Private/Language/locallang_csh_tx_memedia.xml');
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_memedia_domain_model_media','EXT:me_media/Resources/Private/Language/locallang_csh_tx_memedia.xlf');
 
 }
 
