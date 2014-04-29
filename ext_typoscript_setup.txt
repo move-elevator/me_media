@@ -1,68 +1,68 @@
 page {
-    # Add CSS
-    includeCSS {
-        flowplayer-layout = EXT:me_media/Resources/Public/js/libs/flowplayer-5.4.6/skin/minimalist.css
-    }
+	# Add CSS
+	includeCSS {
+		flowplayer-layout = EXT:me_media/Resources/Public/js/libs/flowplayer-5.4.6/skin/minimalist.css
+	}
 
-    # Add JS
-    includeJSFooter {
-        flowplayer = EXT:me_media/Resources/Public/js/libs/flowplayer-5.4.6/flowplayer.js
-    }
+	# Add JS
+	includeJSFooter {
+		flowplayer = EXT:me_media/Resources/Public/js/libs/flowplayer-5.4.6/flowplayer.js
+	}
 }
 
 config.tx_extbase {
-    persistence {
-        classes {
-            MoveElevator\MeMedia\Domain\Model\Media {
-                subclasses {
-                    MoveElevator\MeMedia\Domain\Model\Media\Audio = MoveElevator\MeMedia\Domain\Model\Media\Audio
-                    MoveElevator\MeMedia\Domain\Model\Media\Movie\Video = MoveElevator\MeMedia\Domain\Model\Media\Movie\Video
-                    MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream = MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream
-                    MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream = MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream
-                }
-                mapping {
-                    columns {
-                        tx_extbase_type.mapOnProperty = type
-                    }
-                }
-            }
-            MoveElevator\MeMedia\Domain\Model\Media\Audio {
-                mapping {
-                    tableName = tx_memedia_domain_model_media
-                    recordType = MoveElevator\MeMedia\Domain\Model\Media\Audio
-                    columns {
-                        file_audio.mapOnProperty = file
-                    }
-                }
-            }
-            MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream {
-                mapping {
-                    tableName = tx_memedia_domain_model_media
-                    recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream
-                    columns {
-                        file_stream.mapOnProperty = file
-                    }
-                }
-            }
-            MoveElevator\MeMedia\Domain\Model\Media\Movie\Video {
-                mapping {
-                    tableName = tx_memedia_domain_model_media
-                    recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\Video
-                    columns {
-                        files_video.mapOnProperty = fileList
-                    }
-                }
-            }
-            MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream {
-                mapping {
-                    tableName = tx_memedia_domain_model_media
-                    recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream
-                    columns {
-                        external_stream_provider.mapOnProperty = provider
-                        external_stream_id.mapOnProperty = externalId
-                    }
-                }
-            }
-        }
-    }
+	persistence {
+		classes {
+			MoveElevator\MeMedia\Domain\Model\Media {
+				subclasses {
+					MoveElevator\MeMedia\Domain\Model\Media\Audio = MoveElevator\MeMedia\Domain\Model\Media\Audio
+					MoveElevator\MeMedia\Domain\Model\Media\Movie\Video = MoveElevator\MeMedia\Domain\Model\Media\Movie\Video
+					MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream = MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream
+					MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream = MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream
+				}
+				mapping {
+					columns {
+						tx_extbase_type.mapOnProperty = type
+					}
+				}
+			}
+			MoveElevator\MeMedia\Domain\Model\Media\Audio {
+				mapping {
+					tableName = tx_memedia_domain_model_media
+					recordType = MoveElevator\MeMedia\Domain\Model\Media\Audio
+					columns {
+						file_audio.mapOnProperty = file
+					}
+				}
+			}
+			MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream {
+				mapping {
+					tableName = tx_memedia_domain_model_media
+					recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream
+					columns {
+						file_stream.mapOnProperty = file
+					}
+				}
+			}
+			MoveElevator\MeMedia\Domain\Model\Media\Movie\Video {
+				mapping {
+					tableName = tx_memedia_domain_model_media
+					recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\Video
+					columns {
+						files_video.mapOnProperty = fileList
+					}
+				}
+			}
+			MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream {
+				mapping {
+					tableName = tx_memedia_domain_model_media
+					recordType = MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream
+					columns {
+						external_stream_provider.mapOnProperty = provider
+						external_stream_id.mapOnProperty = externalId
+					}
+				}
+			}
+		}
+	}
 }
