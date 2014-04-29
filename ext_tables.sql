@@ -26,8 +26,8 @@ CREATE TABLE tx_memedia_domain_model_media (
 	external_stream_provider varchar(50) DEFAULT '' NOT NULL,
 	external_stream_id tinytext NOT NULL,
 
-	width varchar(255) DEFAULT '' NOT NULL,
-	height varchar(255) DEFAULT '' NOT NULL,
+	width int(11) DEFAULT '0' NOT NULL,
+	height int(11) DEFAULT '0' NOT NULL,
 
 	is_dummy_record int(11) DEFAULT '0' NOT NULL
 
