@@ -2,8 +2,8 @@
 
 namespace MoveElevator\MeMedia\Domain\Model\Media;
 
-use TYPO3\CMS\Extbase\Domain\Model\FileReference;
-use MoveElevator\MeMedia\Domain\Model\Media;
+use \TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use \MoveElevator\MeMedia\Domain\Model\Media;
 
 /**
  * Class InternalStream
