@@ -53,9 +53,9 @@ class AudioTest extends UnitTestCase {
 	 * @return void
 	 */
 	public function testSetAndGetFile() {
-		/** @var \TYPO3\CMS\Extbase\Domain\Model\FileReference $expectedFile */
-		$expectedFile = $this->objectManager->get('TYPO3\CMS\Extbase\Domain\Model\FileReference');
-		$this->audio->setFile($expectedFile);
+		/** @var \TYPO3\CMS\Extbase\Domain\Model\FileReference $expected */
+		$expected = $this->objectManager->get('TYPO3\CMS\Extbase\Domain\Model\FileReference');
+		$this->audio->setFile($expected);
 		$this->assertInstanceOf('TYPO3\CMS\Extbase\Domain\Model\FileReference', $this->audio->getFile());
 	}
 }

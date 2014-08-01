@@ -54,8 +54,8 @@ class InternalStreamTest extends UnitTestCase {
 	 */
 	public function testSetAndGetFile() {
 		/** @var \TYPO3\CMS\Extbase\Domain\Model\FileReference $expectedFile */
-		$expectedFile = $this->objectManager->get('TYPO3\CMS\Extbase\Domain\Model\FileReference');
-		$this->internalStream->setFile($expectedFile);
+		$expected = $this->objectManager->get('TYPO3\CMS\Extbase\Domain\Model\FileReference');
+		$this->internalStream->setFile($expected);
 		$this->assertInstanceOf('TYPO3\CMS\Extbase\Domain\Model\FileReference', $this->internalStream->getFile());
 	}
 }

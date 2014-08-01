@@ -53,9 +53,9 @@ class MovieTest extends UnitTestCase {
 	 * @return void
 	 */
 	public function testSetAndGetImage() {
-		/** @var \TYPO3\CMS\Extbase\Domain\Model\FileReference $expectedFileReference */
-		$expectedFileReference = $this->objectManager->get('TYPO3\CMS\Extbase\Domain\Model\FileReference');
-		$this->movie->setImage($expectedFileReference);
+		/** @var \TYPO3\CMS\Extbase\Domain\Model\FileReference $expected */
+		$expected = $this->objectManager->get('TYPO3\CMS\Extbase\Domain\Model\FileReference');
+		$this->movie->setImage($expected);
 		$this->assertInstanceOf('TYPO3\CMS\Extbase\Domain\Model\FileReference', $this->movie->getImage());
 	}
 
@@ -65,9 +65,9 @@ class MovieTest extends UnitTestCase {
 	 * @return void
 	 */
 	public function testSetAndGetWidth() {
-		$expectedWidth = 100;
-		$this->movie->setWidth($expectedWidth);
-		$this->assertEquals($expectedWidth, $this->movie->getWidth());
+		$expected = 100;
+		$this->movie->setWidth($expected);
+		$this->assertEquals($expected, $this->movie->getWidth());
 	}
 
 	/**
@@ -76,9 +76,9 @@ class MovieTest extends UnitTestCase {
 	 * @return void
 	 */
 	public function testSetAndGetHeight() {
-		$expectedHeight = 100;
-		$this->movie->setHeight($expectedHeight);
-		$this->assertEquals($expectedHeight, $this->movie->getHeight());
+		$expected = 100;
+		$this->movie->setHeight($expected);
+		$this->assertEquals($expected, $this->movie->getHeight());
 	}
 }
 

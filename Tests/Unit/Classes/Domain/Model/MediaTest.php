@@ -53,9 +53,9 @@ class MediaTest extends UnitTestCase {
 	 * @return void
 	 */
 	public function testSetAndGetDescription() {
-		$expectedDescription = 'description';
-		$this->media->setDescription($expectedDescription);
-		$this->assertEquals($expectedDescription, $this->media->getDescription());
+		$expected = 'description';
+		$this->media->setDescription($expected);
+		$this->assertEquals($expected, $this->media->getDescription());
 	}
 
 	/**
@@ -64,9 +64,9 @@ class MediaTest extends UnitTestCase {
 	 * @return void
 	 */
 	public function testSetAndGetTitle() {
-		$expectedTitle = 'title';
-		$this->media->setTitle($expectedTitle);
-		$this->assertEquals($expectedTitle, $this->media->getTitle());
+		$expected = 'title';
+		$this->media->setTitle($expected);
+		$this->assertEquals($expected, $this->media->getTitle());
 	}
 
 	/**
@@ -75,9 +75,9 @@ class MediaTest extends UnitTestCase {
 	 * @return void
 	 */
 	public function testSetAndGetType() {
-		$expectedType = 'type';
-		$this->media->setType($expectedType);
-		$this->assertEquals($expectedType, $this->media->getType());
+		$expected = 'type';
+		$this->media->setType($expected);
+		$this->assertEquals($expected, $this->media->getType());
 	}
 }
 

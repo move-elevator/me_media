@@ -54,8 +54,8 @@ class VideoTest extends UnitTestCase {
 	 */
 	public function testSetAndGetFileList() {
 		/** @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage $expectedStorage */
-		$expectedStorage = $this->objectManager->get('TYPO3\CMS\Extbase\Persistence\ObjectStorage');
-		$this->video->setFileList($expectedStorage);
+		$expected = $this->objectManager->get('TYPO3\CMS\Extbase\Persistence\ObjectStorage');
+		$this->video->setFileList($expected);
 		$this->assertInstanceOf('TYPO3\CMS\Extbase\Persistence\ObjectStorage', $this->video->getFileList());
 	}
 }
