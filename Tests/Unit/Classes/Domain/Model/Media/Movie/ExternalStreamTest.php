@@ -48,8 +48,8 @@ class ExternalStreamTest extends UnitTestCase {
 	}
 
 	/**
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie\ExternalStream::setProvider
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie\ExternalStream::getProvider
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream::setProvider
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream::getProvider
 	 * @return void
 	 */
 	public function testSetAndGetProvider() {
@@ -59,8 +59,8 @@ class ExternalStreamTest extends UnitTestCase {
 	}
 
 	/**
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie\ExternalStream::setExternalId
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie\ExternalStream::getExternalId
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream::setExternalId
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie\ExternalStream::getExternalId
 	 * @return void
 	 */
 	public function testSetAndGetExternalId() {

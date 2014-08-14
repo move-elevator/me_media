@@ -19,6 +19,7 @@ class MediaRepository extends Repository {
 		} else {
 			$query->getQuerySettings()->setRespectStoragePage(FALSE);
 		}
+
 		return $query->execute();
 	}
 }

@@ -48,8 +48,8 @@ class VideoTest extends UnitTestCase {
 	}
 
 	/**
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie\Video::setFileList
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie\Video::getFileList
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie\Video::setFileList
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie\Video::getFileList
 	 * @return void
 	 */
 	public function testSetAndGetFileList() {

@@ -48,8 +48,8 @@ class MovieTest extends UnitTestCase {
 	}
 
 	/**
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie::setImage
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie::getImage
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie::setImage
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie::getImage
 	 * @return void
 	 */
 	public function testSetAndGetImage() {
@@ -60,8 +60,8 @@ class MovieTest extends UnitTestCase {
 	}
 
 	/**
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie::setWidth
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie::getWidth
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie::setWidth
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie::getWidth
 	 * @return void
 	 */
 	public function testSetAndGetWidth() {
@@ -71,8 +71,8 @@ class MovieTest extends UnitTestCase {
 	}
 
 	/**
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie::setHeight
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie::getHeight
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie::setHeight
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie::getHeight
 	 * @return void
 	 */
 	public function testSetAndGetHeight() {

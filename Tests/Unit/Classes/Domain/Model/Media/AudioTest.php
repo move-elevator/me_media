@@ -48,8 +48,8 @@ class AudioTest extends UnitTestCase {
 	}
 
 	/**
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Audio::setFile
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Audio::getFile
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Audio::setFile
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Audio::getFile
 	 * @return void
 	 */
 	public function testSetAndGetFile() {

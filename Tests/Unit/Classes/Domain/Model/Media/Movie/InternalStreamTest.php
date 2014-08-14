@@ -48,8 +48,8 @@ class InternalStreamTest extends UnitTestCase {
 	}
 
 	/**
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie\InternalStream::setFile
-	 * @covers \MoveElevator\MeMedia\Domain\Model\Movie\InternalStream::getFile
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream::setFile
+	 * @covers \MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream::getFile
 	 * @return void
 	 */
 	public function testSetAndGetFile() {
