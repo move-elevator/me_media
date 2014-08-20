@@ -10,6 +10,14 @@ $TCA['tx_memedia_domain_model_media'] = array(
 	),
 	'feInterface' => $TCA['tx_memedia_domain_model_media']['feInterface'],
 	'columns' => array(
+		't3ver_label' => array (
+			'label'  => 'LLL:EXT:lang/locallang_general.xml:LGL.versionLabel',
+			'config' => array (
+				'type' => 'input',
+				'size' => '30',
+				'max'  => '30',
+			)
+		),
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',

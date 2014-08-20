@@ -42,6 +42,9 @@ $TCA['tx_memedia_domain_model_media'] = array(
 			'fe_group' => 'fe_group',
 			'is_dummy_record' => 'is_dummy_record'
 		),
+		'versioningWS' => TRUE,
+		'versioning_followPages' => TRUE,
+		'origUid' => 't3_origuid',
 		'thumbnail' => 'image',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Media.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_memedia_domain_model_media.png'
