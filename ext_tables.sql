@@ -41,6 +41,10 @@ CREATE TABLE tx_memedia_domain_model_media (
 	t3ver_tstamp int(11) DEFAULT '0' NOT NULL,
 	t3_origuid int(11) DEFAULT '0' NOT NULL,
 
+	l10n_parent int(11) DEFAULT '0' NOT NULL,
+	l10n_diffsource mediumblob,
+	sys_language_uid int(11) DEFAULT '0' NOT NULL,
+
 	PRIMARY KEY (uid),
 	KEY parent (pid)
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid)

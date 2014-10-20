@@ -6,16 +6,16 @@ if (!defined('TYPO3_MODE'))
 $TCA['tx_memedia_domain_model_media'] = array(
 	'ctrl' => $TCA['tx_memedia_domain_model_media']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'hidden,starttime,endtime,fe_group,title,type'
+		'showRecordFieldList' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,starttime,endtime,fe_group,title,type'
 	),
 	'feInterface' => $TCA['tx_memedia_domain_model_media']['feInterface'],
 	'columns' => array(
-		't3ver_label' => array (
-			'label'  => 'LLL:EXT:lang/locallang_general.xml:LGL.versionLabel',
-			'config' => array (
+		't3ver_label' => array(
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.versionLabel',
+			'config' => array(
 				'type' => 'input',
 				'size' => '30',
-				'max'  => '30',
+				'max' => '30',
 			)
 		),
 		'hidden' => array(
@@ -68,6 +68,37 @@ $TCA['tx_memedia_domain_model_media'] = array(
 				'foreign_table' => 'fe_groups'
 			)
 		),
+		'sys_language_uid' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:cms/locallang_ttc.xlf:sys_language_uid_formlabel',
+			'config' => array(
+				'type' => 'select',
+				'foreign_table' => 'sys_language',
+				'foreign_table_where' => 'ORDER BY sys_language.title',
+				'items' => array(
+					array('LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages', -1),
+					array('LLL:EXT:lang/locallang_general.xlf:LGL.default_value', 0)
+				)
+			)
+		),
+		'l10n_parent' => array(
+			'displayCond' => 'FIELD:sys_language_uid:>:0',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
+			'config' => array(
+				'type' => 'select',
+				'items' => array(
+					array('', 0),
+				),
+				'foreign_table' => 'tx_memedia_domain_model_media',
+				'foreign_table_where' => 'AND tx_memedia_domain_model_media.pid=###CURRENT_PID### AND tx_memedia_domain_model_media.sys_language_uid IN (-1,0)',
+			)
+		),
+		'l10n_diffsource' => array(
+			'config' => array(
+				'type' => 'passthrough'
+			)
+		),
 		'title' => Array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.title',
@@ -101,7 +132,7 @@ $TCA['tx_memedia_domain_model_media'] = array(
 				'size' => 1,
 				'maxitems' => 1,
 				'eval' => 'required',
-				'allowNonIdValues' => true,
+				'allowNonIdValues' => TRUE,
 				'default' => 'MoveElevator\MeMedia\Domain\Model\Media\Movie\Video',
 			)
 		),
@@ -109,21 +140,21 @@ $TCA['tx_memedia_domain_model_media'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.files_video',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('files', array(
-							'minitems' => 3,
-							'maxitems' => 3
-						),
-						'mp4,ogv,webm'
+						'minitems' => 3,
+						'maxitems' => 3
 					),
+					'mp4,ogv,webm'
+				),
 			'displayCond' => 'FIELD:tx_extbase_type:=:MoveElevator\MeMedia\Domain\Model\Media\Movie\Video',
 		),
 		'file_stream' => Array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.file_stream',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('files', array(
-							'minitems' => 1,
-							'maxitems' => 1
-						)
-					),
+						'minitems' => 1,
+						'maxitems' => 1
+					)
+				),
 			'displayCond' => 'FIELD:tx_extbase_type:=:MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream',
 		),
 		'external_stream_provider' => Array(
@@ -156,22 +187,22 @@ $TCA['tx_memedia_domain_model_media'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.file_audio',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('file_audio', array(
-							'minitems' => 1,
-							'maxitems' => 1
-						)
-					),
+						'minitems' => 1,
+						'maxitems' => 1
+					)
+				),
 			'displayCond' => 'FIELD:tx_extbase_type:=:MoveElevator\MeMedia\Domain\Model\Media\Audio',
 		),
 		'image' => Array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media.image',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('image', array(
-							'minitems' => 1,
-							'maxitems' => 1,
-							'uploadfolder' => 'uploads/tx_memedia',
-						),
-						'gif,png,jpeg,jpg'
+						'minitems' => 1,
+						'maxitems' => 1,
+						'uploadfolder' => 'uploads/tx_memedia',
 					),
+					'gif,png,jpeg,jpg'
+				),
 			'displayCond' => 'FIELD:tx_extbase_type:IN:MoveElevator\MeMedia\Domain\Model\Media\Movie\Video,MoveElevator\MeMedia\Domain\Model\Media\Movie\InternalStream',
 		),
 		'width' => Array(
@@ -196,7 +227,7 @@ $TCA['tx_memedia_domain_model_media'] = array(
 		),
 	),
 	'types' => array(
-		'0' => array('showitem' => 'hidden;;1;;1-1-1, title;;;;2-2-2, description, tx_extbase_type;;;;3-3-3, files_video, file_stream, external_stream_provider, external_stream_id, file_audio, image, width, height'),
+		'0' => array('showitem' => 'hidden,sys_language_uid;;1;;1-1-1, title;;;;2-2-2, description, tx_extbase_type;;;;3-3-3, files_video, file_stream, external_stream_provider, external_stream_id, file_audio, image, width, height'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => 'starttime, endtime, fe_group')

@@ -27,6 +27,11 @@ class Media extends AbstractEntity {
 	protected $type;
 
 	/**
+	 * @var int $sys_language_uid
+	 */
+	protected $sys_language_uid;
+
+	/**
 	 * @param string $description
 	 */
 	public function setDescription($description) {
@@ -74,7 +79,23 @@ class Media extends AbstractEntity {
 	public function getShortType() {
 		$typeNamespaceList = explode('\\', $this->type);
 
-		return (string) end($typeNamespaceList);
+		return (string)end($typeNamespaceList);
+	}
+
+
+	/**
+	 * @param int $sys_language_uid sys_language_uid
+	 * @return void
+	 */
+	public function setSys_language_uid($sys_language_uid) {
+		$this->sys_language_uid = $sys_language_uid;
+	}
+
+	/**
+	 * @return int sys_language_uid
+	 */
+	public function getSys_language_uid() {
+		return $this->sys_language_uid;
 	}
 }
 

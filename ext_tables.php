@@ -42,6 +42,9 @@ $TCA['tx_memedia_domain_model_media'] = array(
 			'fe_group' => 'fe_group',
 			'is_dummy_record' => 'is_dummy_record'
 		),
+		'languageField' => 'sys_language_uid',
+		'transOrigPointerField' => 'l10n_parent',
+		'transOrigDiffSourceField' => 'l10n_diffsource',
 		'versioningWS' => TRUE,
 		'versioning_followPages' => TRUE,
 		'origUid' => 't3_origuid',
