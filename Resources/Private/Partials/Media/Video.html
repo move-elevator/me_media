@@ -6,6 +6,7 @@
     <p>{record.description}</p>
 </f:if>
 
+<i class="fa fa-video-camera"></i>
 <div class="flowplayer">
     <video width="{record.width}" height="{record.height}" preload="auto" poster="{record.image.originalResource.publicUrl}" controls>
         <f:for each="{record.fileList}" as="file">

@@ -2,6 +2,7 @@
     <h2>{record.title}</h2>
 </f:if>
 
+<i class="fa fa-video-camera"></i>
 <div class="flowplayer">
     <video width="{record.width}" height="{record.height}" preload="auto" poster="{record.image.originalResource.publicUrl}" controls>
         <source src="{record.file.originalResource.publicUrl}" type="{record.file.originalResource.originalFile.properties.mime_type}">
