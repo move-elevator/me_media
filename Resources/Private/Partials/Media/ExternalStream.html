@@ -7,16 +7,16 @@
 </f:if>
 
 <f:if condition="{0:record.provider} == {0:'youtube'}">
-	<i class="fa fa-video-camera"></i><br />
+	<i class="fa fa-video-camera visible-print-block"></i><br />
     <f:render partial="Media/ExternalStream/Youtube" arguments="{record: record}" />
 </f:if>
 
 <f:if condition="{0:record.provider} == {0:'vimeo'}">
-	<i class="fa fa-video-camera"></i><br />
+	<i class="fa fa-video-camera visible-print-block"></i><br />
     <f:render partial="Media/ExternalStream/Vimeo" arguments="{record: record}" />
 </f:if>
 
 <f:if condition="{0:record.provider} == {0:'myvideo'}">
-	<i class="fa fa-video-camera"></i><br />
+	<i class="fa fa-video-camera visible-print-block"></i><br />
     <f:render partial="Media/ExternalStream/MyVideo" arguments="{record: record}" />
 </f:if>
