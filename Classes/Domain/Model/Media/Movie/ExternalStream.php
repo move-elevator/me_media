@@ -2,7 +2,7 @@
 
 namespace MoveElevator\MeMedia\Domain\Model\Media\Movie;
 
-use MoveElevator\MeMedia\Domain\Model\Media\Movie;
+use \MoveElevator\MeMedia\Domain\Model\Media\Movie;
 
 /**
  * Class ExternalStream
@@ -23,6 +23,7 @@ class ExternalStream extends Movie {
 
 	/**
 	 * @param string $externalId
+	 * @return void
 	 */
 	public function setExternalId($externalId) {
 		$this->externalId = $externalId;
@@ -37,6 +38,7 @@ class ExternalStream extends Movie {
 
 	/**
 	 * @param string $provider
+	 * @return void
 	 */
 	public function setProvider($provider) {
 		$this->provider = $provider;
@@ -49,5 +51,3 @@ class ExternalStream extends Movie {
 		return $this->provider;
 	}
 }
-
-?>
