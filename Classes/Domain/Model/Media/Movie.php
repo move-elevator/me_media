@@ -29,6 +29,7 @@ class Movie extends Media {
 
 	/**
 	 * @param int $height
+	 * @return void
 	 */
 	public function setHeight($height) {
 		$this->height = $height;
@@ -43,6 +44,7 @@ class Movie extends Media {
 
 	/**
 	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+	 * @return void
 	 */
 	public function setImage(FileReference $image) {
 		$this->image = $image;
@@ -57,6 +59,7 @@ class Movie extends Media {
 
 	/**
 	 * @param int $width
+	 * @return void
 	 */
 	public function setWidth($width) {
 		$this->width = $width;
@@ -69,5 +72,3 @@ class Movie extends Media {
 		return $this->width;
 	}
 }
-
-?>

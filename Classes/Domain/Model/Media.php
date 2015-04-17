@@ -2,7 +2,7 @@
 
 namespace MoveElevator\MeMedia\Domain\Model;
 
-use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /**
  * Class Media
@@ -28,6 +28,7 @@ class Media extends AbstractEntity {
 
 	/**
 	 * @param string $description
+	 * @return void
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
@@ -42,6 +43,7 @@ class Media extends AbstractEntity {
 
 	/**
 	 * @param string $title
+	 * @return void
 	 */
 	public function setTitle($title) {
 		$this->title = $title;
@@ -56,6 +58,7 @@ class Media extends AbstractEntity {
 
 	/**
 	 * @param string $type
+	 * @return void
 	 */
 	public function setType($type) {
 		$this->type = $type;
@@ -74,8 +77,9 @@ class Media extends AbstractEntity {
 	public function getShortType() {
 		$typeNamespaceList = explode('\\', $this->type);
 
-		return (string) end($typeNamespaceList);
+		return (string)end($typeNamespaceList);
 	}
+
 	/**
 	 * Set sys language
 	 *
@@ -114,5 +118,3 @@ class Media extends AbstractEntity {
 		return $this->l10nParent;
 	}
 }
-
-?>

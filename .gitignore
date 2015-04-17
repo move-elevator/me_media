@@ -1,0 +1,8 @@
+Build/bin*
+Build/log*
+Build/php*
+!Build/phpmd.xml
+vendor
+cache.*
+composer*
+!composer.json

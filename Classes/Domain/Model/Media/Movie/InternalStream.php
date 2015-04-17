@@ -2,8 +2,8 @@
 
 namespace MoveElevator\MeMedia\Domain\Model\Media\Movie;
 
-use TYPO3\CMS\Extbase\Domain\Model\FileReference;
-use MoveElevator\MeMedia\Domain\Model\Media\Movie;
+use \TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use \MoveElevator\MeMedia\Domain\Model\Media\Movie;
 
 /**
  * Class InternalStream
@@ -19,6 +19,7 @@ class InternalStream extends Movie {
 
 	/**
 	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $file
+	 * @return void
 	 */
 	public function setFile(FileReference $file) {
 		$this->file = $file;
@@ -32,5 +33,3 @@ class InternalStream extends Movie {
 	}
 
 }
-
-?>

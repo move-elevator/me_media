@@ -3,14 +3,20 @@
 namespace MoveElevator\MeMedia\Domain\Repository;
 
 use \TYPO3\CMS\Extbase\Persistence\Repository;
+use \TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 
+/**
+ * Class MediaRepository
+ *
+ * @package MoveElevator\MeMedia\Domain\Repository
+ */
 class MediaRepository extends Repository {
 
 	/**
 	 * Finds all media records, optional by given storage pid
 	 *
 	 * @param integer $storagePid
-	 * @return \TYPO3\CMS\Extbase\Persistence\QueryResultInterface|array
+	 * @return QueryResultInterface
 	 */
 	public function findAll($storagePid = 0) {
 		$query = $this->createQuery();
@@ -23,5 +29,3 @@ class MediaRepository extends Repository {
 		return $query->execute();
 	}
 }
-
-?>

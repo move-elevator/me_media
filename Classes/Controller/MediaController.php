@@ -2,8 +2,8 @@
 
 namespace MoveElevator\MeMedia\Controller;
 
-use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use MoveElevator\MeMedia\Domain\Model\Media;
+use \TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use \MoveElevator\MeMedia\Domain\Model\Media;
 
 /**
  * Class MediaController
@@ -28,6 +28,7 @@ class MediaController extends ActionController {
 
 	/**
 	 * @param int $media
+	 * @return void
 	 */
 	public function showAction($media = NULL) {
 		$mediaRecord = $this->getMedia($media);
@@ -50,5 +51,3 @@ class MediaController extends ActionController {
 		return $this->mediaRepository->findByUid($mediaId);
 	}
 }
-
-?>
