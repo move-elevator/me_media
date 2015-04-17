@@ -1,90 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2013-01-11T10:49:30Z" product-name="me_media">
-		<header/>
-		<body>
-			<trans-unit id="tx_memedia_domain_model_media">
-				<target>Media Center entry</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.title">
-				<target>Titel</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.description">
-				<target>Beschreibung</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.type">
-				<target>Typ</target>
-			</trans-unit>
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2013-01-11T10:49:30Z" product-name="me_media">
+        <header/>
+        <body>
+            <trans-unit id="tx_memedia_domain_model_media">
+                <target>Media Center entry</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.title">
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.description">
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.type">
+                <target>Typ</target>
+            </trans-unit>
 
-			<trans-unit id="tx_memedia_domain_model_media.type.I.video">
-				<target>Video</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.type.I.stream">
-				<target>Stream</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.type.I.external_stream">
-				<target>Externer Stream</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.type.I.audio">
-				<target>Audio</target>
-			</trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.type.I.video">
+                <target>Video</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.type.I.stream">
+                <target>Stream</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.type.I.external_stream">
+                <target>Externer Stream</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.type.I.audio">
+                <target>Audio</target>
+            </trans-unit>
 
-			<trans-unit id="tx_memedia_domain_model_media.files_video">
-				<target>Videodateien (*.mp4, *.ogv, *.webm)</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.file_stream">
-				<target>Datei für Stream</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.file_audio">
-				<target>Audiodatei</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.external_stream_provider">
-				<target>Video-Plattform</target>
-			</trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.files_video">
+                <target>Videodateien (*.mp4, *.ogv, *.webm)</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.file_stream">
+                <target>Datei für Stream</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.file_audio">
+                <target>Audiodatei</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.external_stream_provider">
+                <target>Video-Plattform</target>
+            </trans-unit>
 
-			<trans-unit id="tx_memedia_domain_model_media.external_stream_provider.I.youtube">
-				<target>Youtube</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.external_stream_provider.I.vimeo">
-				<target>Vimeo</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.external_stream_provider.I.myvideo">
-				<target>My Video</target>
-			</trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.external_stream_provider.I.youtube">
+                <target>Youtube</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.external_stream_provider.I.vimeo">
+                <target>Vimeo</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.external_stream_provider.I.myvideo">
+                <target>My Video</target>
+            </trans-unit>
 
-			<trans-unit id="tx_memedia_domain_model_media.external_stream_id">
-				<target>Video-ID</target>
-			</trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.external_stream_id">
+                <target>Video-ID</target>
+            </trans-unit>
 
-			<trans-unit id="tx_memedia_domain_model_media.height">
-				<target>Höhe</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.width">
-				<target>Breite</target>
-			</trans-unit>
-			<trans-unit id="tx_memedia_domain_model_media.image">
-				<target>Bild</target>
-			</trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.height">
+                <target>Höhe</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.width">
+                <target>Breite</target>
+            </trans-unit>
+            <trans-unit id="tx_memedia_domain_model_media.image">
+                <target>Bild</target>
+            </trans-unit>
 
-			<trans-unit id="flexform.list.title">
-				<target>Plugineinstellungen</target>
-			</trans-unit>
-			<trans-unit id="flexform.list.storagePid">
-				<target>Verzeichnis</target>
-			</trans-unit>
-			<trans-unit id="flexform.list.showPid">
-				<target>Detailseite</target>
-			</trans-unit>
+            <trans-unit id="flexform.list.title">
+                <target>Plugineinstellungen</target>
+            </trans-unit>
+            <trans-unit id="flexform.list.storagePid">
+                <target>Verzeichnis</target>
+            </trans-unit>
+            <trans-unit id="flexform.list.showPid">
+                <target>Detailseite</target>
+            </trans-unit>
 
-			<trans-unit id="flexform.show.title">
-				<target>Einstellungen</target>
-			</trans-unit>
-			<trans-unit id="flexform.show.mediaId">
-				<target>Media Center Datensatz</target>
-			</trans-unit>
-			<trans-unit id="flexform.show.listPid">
-				<target>Listenansicht</target>
-			</trans-unit>
-		</body>
-	</file>
+            <trans-unit id="flexform.show.title">
+                <target>Einstellungen</target>
+            </trans-unit>
+            <trans-unit id="flexform.show.mediaId">
+                <target>Media Center Datensatz</target>
+            </trans-unit>
+            <trans-unit id="flexform.show.listPid">
+                <target>Listenansicht</target>
+            </trans-unit>
+
+            <trans-unit id="plugin.title.detail">
+                <target>m:e Media Center Detail</target>
+            </trans-unit>
+            <trans-unit id="plugin.title.list">
+                <target>m:e Media Center Liste</target>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>
