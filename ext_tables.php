@@ -72,3 +72,9 @@ $TCA['tx_memedia_domain_model_media'] = array(
 			'Resources/Public/Icons/tx_memedia_domain_model_media.png'
 	),
 );
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+	$_EXTKEY,
+	'Configuration/TypoScript/Flowplayer',
+	'm:e Media Center Flowplayer'
+);
