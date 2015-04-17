@@ -2,21 +2,15 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'm:e Media Center',
-	'description' => 'Media Center',
-	'category' => 'fe',
-	'author' => 'Jan Maennig',
-	'author_email' => 'jma@move-elevator.de',
-	'author_company' => 'move:elevator',
-	'shy' => '',
-	'priority' => '',
-	'module' => '',
-	'state' => 'alpha',
-	'internal' => '',
+	'description' => 'Media center to present audio and video file as well as internal streams and stream from external provider youtube, vimeo and my video.',
+	'category' => 'plugin',
+	'author' => 'move : elevator',
+	'author_email' => 'typo3@move-elevator.de',
+	'author_company' => 'move elevator GmbH',
+	'state' => 'stable',
 	'uploadfolder' => '1',
 	'createDirs' => 'uploads/tx_memedia',
-	'modify_tables' => '',
 	'clearCacheOnLoad' => 0,
-	'lockType' => '',
 	'version' => '1.2.0',
 	'constraints' => array(
 		'depends' => array(
