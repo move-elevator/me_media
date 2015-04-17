@@ -16,4 +16,12 @@
 	<f:if condition="{record.shortType} == 'Audio'">
 		<f:render partial="Media/Audio" arguments="{record: record}"/>
 	</f:if>
+	<f:if condition="{settings.listPid}">
+		<div class="back-link">
+			<f:link.page pageUid="{settings.listPid}" title="{f:translate(key:'frontend.backlink')}">
+				&laquo;&nbsp;
+				<f:translate key="frontend.backlink"/>
+			</f:link.page>
+		</div>
+	</f:if>
 </f:section>

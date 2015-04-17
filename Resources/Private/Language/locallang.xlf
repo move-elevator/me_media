@@ -6,6 +6,9 @@
             <trans-unit id="tx_memedia_domain_model_media.title">
                 <target>Title</target>
             </trans-unit>
+            <trans-unit id="frontend.backlink">
+                <target>back to List</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
