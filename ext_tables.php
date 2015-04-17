@@ -75,6 +75,12 @@ $TCA['tx_memedia_domain_model_media'] = array(
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
 	$_EXTKEY,
+	'Configuration/TypoScript/jQuery',
+	'm:e Media Center jQuery'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+	$_EXTKEY,
 	'Configuration/TypoScript/Flowplayer',
 	'm:e Media Center Flowplayer'
 );
