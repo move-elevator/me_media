@@ -19,8 +19,8 @@ Media center to present audio and video file as well as internal streams and str
 ### Detail view
 
 1. Include plugin "m:e Media Center Detail".
-2. If you used the plugin without list view you can select one media center entry in plugin.
-3. If you used a list view you can select the list page in plugin.
+2. If you use the plugin without list view you can select one single media center entry in plugin.
+3. If you use a list view you can select the list page in plugin.
 
 ## Contact
 
