@@ -85,6 +85,13 @@
             <trans-unit id="flexform.show.listPid">
                 <source>Listpage</source>
             </trans-unit>
+
+            <trans-unit id="plugin.title.detail">
+                <source>m:e Media Center Detail</source>
+            </trans-unit>
+            <trans-unit id="plugin.title.list">
+                <source>m:e Media Center List</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

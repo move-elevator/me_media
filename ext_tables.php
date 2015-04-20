@@ -8,7 +8,11 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('extbase')) {
 	$extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
 
 	// List Plugin
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin($_EXTKEY, 'List', 'm:e Media Center Liste');
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+		$_EXTKEY,
+		'List',
+		'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:plugin.title.list'
+	);
 	$pluginSignatureList = strtolower($extensionName) . '_list';
 	$TCA['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignatureList] = 'layout,select_key,pages,recursive';
 	$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignatureList] = 'pi_flexform';
@@ -18,7 +22,11 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('extbase')) {
 	);
 
 	// Show Plugin
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin($_EXTKEY, 'Show', 'm:e Media Center Detail');
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+		$_EXTKEY,
+		'Show',
+		'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:plugin.title.detail'
+	);
 	$pluginSignatureShow = strtolower($extensionName) . '_show';
 	$TCA['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignatureShow] = 'layout,select_key,pages,recursive';
 	$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignatureShow] = 'pi_flexform';
@@ -63,4 +71,16 @@ $TCA['tx_memedia_domain_model_media'] = array(
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) .
 			'Resources/Public/Icons/tx_memedia_domain_model_media.png'
 	),
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+	$_EXTKEY,
+	'Configuration/TypoScript/jQuery',
+	'm:e Media Center jQuery'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+	$_EXTKEY,
+	'Configuration/TypoScript/Flowplayer',
+	'm:e Media Center Flowplayer'
 );
