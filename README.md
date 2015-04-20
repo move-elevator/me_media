@@ -30,7 +30,7 @@ Media center to present audio and video file as well as internal streams and str
 
 ## Change Log
 
-2015-04-17 Jan Maennig <jma@move-elevator.de>
+2015-04-20 Jan Maennig <jma@move-elevator.de>
 
 	* Initialize Release to TER.
 
