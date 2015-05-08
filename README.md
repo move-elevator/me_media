@@ -4,7 +4,7 @@ Media center to present audio and video file as well as internal streams and str
 
 ## Installation
 
-1. just upload and activate the extension 
+1. just upload and activate the extension
 
 ## Configuration
 
@@ -14,7 +14,7 @@ Media center to present audio and video file as well as internal streams and str
 ### List view
 
 1. Include plugin "m:e Media Center List".
-2. In this plugin do select the sysfolder with media center entries and the detail page. 
+2. In this plugin do select the sysfolder with media center entries and the detail page.
 
 ### Detail view
 
@@ -29,6 +29,10 @@ Media center to present audio and video file as well as internal streams and str
 * Issue-Tracker - https://github.com/move-elevator/me_media
 
 ## Change Log
+
+2015-05-08 Jan Maennig <jma@move-elevator.de>
+
+	* fix composer.json
 
 2015-04-20 Jan Maennig <jma@move-elevator.de>
 
