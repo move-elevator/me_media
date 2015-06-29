@@ -7,7 +7,7 @@
 </f:if>
 
 <i class="fa fa-video-camera visible-print-block"></i>
-<div class="flowplayer">
+<div class="flowplayer content-element">
 	<video width="{record.width}" height="{record.height}" preload="auto" poster="{record.image.originalResource.publicUrl}" controls>
 		<f:for each="{record.fileList}" as="file">
 			<source src="{file.originalResource.publicUrl}" type="{file.originalResource.originalFile.properties.mime_type}">

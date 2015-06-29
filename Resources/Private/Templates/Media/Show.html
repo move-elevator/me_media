@@ -17,6 +17,7 @@
 		<f:render partial="Media/Audio" arguments="{record: record}"/>
 	</f:if>
 	<f:if condition="{settings.listPid}">
+		<div class="clearfix"></div>
 		<div class="back-link btn btn-primary">
 			<f:link.page pageUid="{settings.listPid}" title="{f:translate(key:'frontend.backlink')}">
 				<f:translate key="frontend.backlink"/>
