@@ -2,6 +2,7 @@
 
 namespace MoveElevator\MeMedia\Controller;
 
+use \TYPO3\CMS\Core\Utility\HttpUtility;
 use \TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use \MoveElevator\MeMedia\Domain\Model\Media;
 
@@ -11,6 +12,12 @@ use \MoveElevator\MeMedia\Domain\Model\Media;
  * @package MoveElevator\MeMedia\Controller
  */
 class MediaController extends ActionController {
+
+	/**
+	 * @var \MoveElevator\MeMedia\Service\MediaService
+	 * @inject
+	 */
+	protected $mediaService;
 
 	/**
 	 * @var \MoveElevator\MeMedia\Domain\Repository\MediaRepository
@@ -27,27 +34,50 @@ class MediaController extends ActionController {
 	}
 
 	/**
-	 * @param int $media
+	 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
 	 * @return void
 	 */
-	public function showAction($media = NULL) {
-		$mediaRecord = $this->getMedia($media);
+	public function initializeShowAction() {
+		/** @var \MoveElevator\MeMedia\Domain\Model\Media $media */
+		$media = $this->mediaService->getRecordByRequestData($this->request);
 
-		if ($mediaRecord instanceof Media) {
-			$this->view->assign('record', $mediaRecord);
+		if (
+			!$media instanceof Media
+			&& $this->checkListPidIsSet()
+		) {
+			$this->redirect(
+				'list',
+				NULL,
+				NULL,
+				NULL,
+				intval($this->settings['listPid']),
+				0,
+				HttpUtility::HTTP_STATUS_404
+			);
 		}
 	}
 
 	/**
-	 * @param int $mediaId
-	 * @return \MoveElevator\MeMedia\Domain\Model\Media
+	 * @param \MoveElevator\MeMedia\Domain\Model\Media|NULL $media
+	 * @return void
 	 */
-	protected function getMedia($mediaId = 0) {
+	public function showAction(Media $media = NULL) {
+		if ($media instanceof Media) {
+			$this->view->assign('record', $media);
+		}
+	}
 
-		if (intval($mediaId) === 0) {
-			$mediaId = intval($this->settings['mediaId']);
+	/**
+	 * @return bool
+	 */
+	protected function checkListPidIsSet() {
+		if (
+			!isset($this->settings['listPid'])
+			|| !intval($this->settings['listPid']) === 0
+		) {
+			return FALSE;
 		}
 
-		return $this->mediaRepository->findByUid($mediaId);
+		return TRUE;
 	}
 }
