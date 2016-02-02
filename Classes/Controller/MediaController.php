@@ -2,7 +2,6 @@
 
 namespace MoveElevator\MeMedia\Controller;
 
-use \TYPO3\CMS\Core\Utility\HttpUtility;
 use \TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use \MoveElevator\MeMedia\Domain\Model\Media;
 
@@ -12,6 +11,8 @@ use \MoveElevator\MeMedia\Domain\Model\Media;
  * @package MoveElevator\MeMedia\Controller
  */
 class MediaController extends ActionController {
+
+	const HTTP_STATUSCODE_NOT_FOUND = 404;
 
 	/**
 	 * @var \MoveElevator\MeMedia\Service\MediaService
@@ -39,12 +40,9 @@ class MediaController extends ActionController {
 	 */
 	public function initializeShowAction() {
 		/** @var \MoveElevator\MeMedia\Domain\Model\Media $media */
-		$media = $this->mediaService->getRecordByRequestData($this->request);
+		$media = $this->mediaService->getRecordByRequestDataOrSettings($this->request, $this->settings);
 
-		if (
-			!$media instanceof Media
-			&& $this->checkListPidIsSet()
-		) {
+		if ($this->checkRedirectIsNecessary($media)) {
 			$this->redirect(
 				'list',
 				NULL,
@@ -52,8 +50,12 @@ class MediaController extends ActionController {
 				NULL,
 				intval($this->settings['listPid']),
 				0,
-				HttpUtility::HTTP_STATUS_404
+				self::HTTP_STATUSCODE_NOT_FOUND
 			);
+		}
+
+		if ($media instanceof Media) {
+			$this->request->setArgument('media', $media);
 		}
 	}
 
@@ -79,5 +81,17 @@ class MediaController extends ActionController {
 		}
 
 		return TRUE;
+	}
+
+	/**
+	 * @param \MoveElevator\MeMedia\Domain\Model\Media $media
+	 * @return bool
+	 */
+	protected function checkRedirectIsNecessary($media) {
+		if (!$media instanceof Media && $this->checkListPidIsSet()) {
+			return TRUE;
+		}
+
+		return FALSE;
 	}
 }

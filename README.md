@@ -34,6 +34,7 @@ Media center to present audio and video file as well as internal streams and str
 
 	* add TYPO3 7.6 compatibility
 	* add redirect to list page if no valid media record is in request to detail view
+	* fixed language file
 
 2015-05-08 Jan Maennig <jma@move-elevator.de>
 
