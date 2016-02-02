@@ -4,10 +4,10 @@
         <header/>
         <body>
             <trans-unit id="tx_memedia_domain_model_media.title">
-                <target>Title</target>
+                <source>Title</source>
             </trans-unit>
             <trans-unit id="frontend.backlink">
-                <target>back to List</target>
+                <source>back to List</source>
             </trans-unit>
         </body>
     </file>
