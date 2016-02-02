@@ -4,6 +4,11 @@ namespace MoveElevator\MeMedia\Service;
 
 use \TYPO3\CMS\Extbase\Mvc\Web\Request;
 
+/**
+ * Class MediaService
+ *
+ * @package MoveElevator\MeMedia\Service
+ */
 class MediaService {
 	/**
 	 * @var \MoveElevator\MeMedia\Domain\Repository\MediaRepository
