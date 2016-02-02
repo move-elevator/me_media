@@ -2,6 +2,7 @@
 
 namespace MoveElevator\MeMedia\Controller;
 
+use \TYPO3\CMS\Core\Utility\HttpUtility;
 use \TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use \MoveElevator\MeMedia\Domain\Model\Media;
 
@@ -51,7 +52,7 @@ class MediaController extends ActionController {
 				NULL,
 				intval($this->settings['listPid']),
 				0,
-				404
+				HttpUtility::HTTP_STATUS_404
 			);
 		}
 	}

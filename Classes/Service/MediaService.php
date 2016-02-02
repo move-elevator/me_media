@@ -10,6 +10,7 @@ use \TYPO3\CMS\Extbase\Mvc\Web\Request;
  * @package MoveElevator\MeMedia\Service
  */
 class MediaService {
+
 	/**
 	 * @var \MoveElevator\MeMedia\Domain\Repository\MediaRepository
 	 * @inject
