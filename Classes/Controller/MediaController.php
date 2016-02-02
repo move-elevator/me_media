@@ -37,12 +37,12 @@ class MediaController extends ActionController {
 	 * @return void
 	 */
 	public function initializeShowAction() {
+		/** @var \MoveElevator\MeMedia\Domain\Model\Media $media */
 		$media = $this->mediaService->getRecordByRequestData($this->request);
 
 		if (
-			$media instanceof Media
-			&& isset($this->settings['listPid'])
-			&& intval($this->settings['listPid']) > 0
+			!$media instanceof Media
+			&& $this->checkListPidIsSet()
 		) {
 			$this->redirect(
 				'list',
@@ -61,8 +61,22 @@ class MediaController extends ActionController {
 	 * @return void
 	 */
 	public function showAction(Media $media = NULL) {
-		if ($mediaRecord instanceof Media) {
-			$this->view->assign('record', $mediaRecord);
+		if ($media instanceof Media) {
+			$this->view->assign('record', $media);
 		}
+	}
+
+	/**
+	 * @return bool
+	 */
+	protected function checkListPidIsSet() {
+		if (
+			!isset($this->settings['listPid'])
+			|| !intval($this->settings['listPid']) === 0
+		) {
+			return FALSE;
+		}
+
+		return TRUE;
 	}
 }
