@@ -30,6 +30,11 @@ Media center to present audio and video file as well as internal streams and str
 
 ## Change Log
 
+2016-02-02 Jan Maennig <jma@move-elevator.de>
+
+	* add TYPO3 7.6 compatibility
+	* add redirect to list page if no valid media record is in request to detail view
+
 2015-05-08 Jan Maennig <jma@move-elevator.de>
 
 	* fix composer.json
