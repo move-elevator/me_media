@@ -20,14 +20,12 @@ class MediaService
 
     /**
      * @param \TYPO3\CMS\Extbase\Mvc\Request $requestData
+     * @param array $settings
      * @return \MoveElevator\MeMedia\Domain\Model\Media
      */
-    public function getRecordByRequestDataOrSettings(Request $requestData, $settings)
+    public function getRecordByRequestDataOrSettings(Request $requestData, array $settings)
     {
-        if (
-            !$requestData->hasArgument('media')
-            && !$this->checkIsMediaIdInSettings($settings)
-        ) {
+        if (!$requestData->hasArgument('media') && !$this->checkIsMediaIdInSettings($settings)) {
             return false;
         }
 
