@@ -30,6 +30,10 @@ Media center to present audio and video file as well as internal streams and str
 
 ## Change Log
 
+2016-02-04 Jan Maennig <jma@move-elevator.de>
+
+    * fixed PSR-2 code style
+
 2016-02-02 Jan Maennig <jma@move-elevator.de>
 
 	* add TYPO3 7.6 compatibility
