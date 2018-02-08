@@ -12,7 +12,6 @@ use MoveElevator\MeMedia\Domain\Model\Media;
  */
 class Audio extends Media
 {
-
     /**
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
      */
@@ -20,6 +19,7 @@ class Audio extends Media
 
     /**
      * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $file
+     *
      * @return void
      */
     public function setFile(FileReference $file)

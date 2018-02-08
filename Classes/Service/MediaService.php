@@ -11,7 +11,6 @@ use TYPO3\CMS\Extbase\Mvc\Request;
  */
 class MediaService
 {
-
     /**
      * @var \MoveElevator\MeMedia\Domain\Repository\MediaRepository
      * @inject
@@ -21,7 +20,8 @@ class MediaService
     /**
      * @param \TYPO3\CMS\Extbase\Mvc\Request $requestData
      * @param array $settings
-     * @return \MoveElevator\MeMedia\Domain\Model\Media
+     *
+     * @return \MoveElevator\MeMedia\Domain\Model\Media|bool
      */
     public function getRecordByRequestDataOrSettings(Request $requestData, array $settings)
     {
@@ -43,6 +43,7 @@ class MediaService
 
     /**
      * @param $settings
+     *
      * @return bool
      */
     protected function checkIsMediaIdInSettings($settings)

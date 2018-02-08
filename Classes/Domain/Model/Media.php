@@ -11,7 +11,6 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
  */
 class Media extends AbstractEntity
 {
-
     /**
      * @var string
      */
@@ -29,6 +28,7 @@ class Media extends AbstractEntity
 
     /**
      * @param string $description
+     *
      * @return void
      */
     public function setDescription($description)
@@ -46,6 +46,7 @@ class Media extends AbstractEntity
 
     /**
      * @param string $title
+     *
      * @return void
      */
     public function setTitle($title)
@@ -63,6 +64,7 @@ class Media extends AbstractEntity
 
     /**
      * @param string $type
+     *
      * @return void
      */
     public function setType($type)
@@ -92,6 +94,7 @@ class Media extends AbstractEntity
      * Set sys language
      *
      * @param int $sysLanguageUid
+     *
      * @return void
      */
     public function setSysLanguageUid($sysLanguageUid)
@@ -113,6 +116,7 @@ class Media extends AbstractEntity
      * Set l10n parent
      *
      * @param int $l10nParent
+     *
      * @return void
      */
     public function setL10nParent($l10nParent)

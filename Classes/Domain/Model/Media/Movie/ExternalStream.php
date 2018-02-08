@@ -11,7 +11,6 @@ use MoveElevator\MeMedia\Domain\Model\Media\Movie;
  */
 class ExternalStream extends Movie
 {
-
     /**
      * @var string
      */
@@ -24,6 +23,7 @@ class ExternalStream extends Movie
 
     /**
      * @param string $externalId
+     *
      * @return void
      */
     public function setExternalId($externalId)
@@ -41,6 +41,7 @@ class ExternalStream extends Movie
 
     /**
      * @param string $provider
+     *
      * @return void
      */
     public function setProvider($provider)

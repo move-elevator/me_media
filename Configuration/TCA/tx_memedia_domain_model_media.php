@@ -6,16 +6,38 @@ if (!defined('TYPO3_MODE')) {
 
 const LANGUAGE_FILE = 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf';
 
-$TCA['tx_memedia_domain_model_media'] = array(
-    'ctrl' => $TCA['tx_memedia_domain_model_media']['ctrl'],
+$GLOBALS['TCA']['tx_memedia_domain_model_media'] = array(
+    'ctrl' => array(
+        'title' => 'LLL:EXT:me_media/Resources/Private/Language/locallang_db.xlf:tx_memedia_domain_model_media',
+        'type' => 'tx_extbase_type',
+        'label' => 'title',
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'dividers2tabs' => true,
+        'delete' => 'deleted',
+        'enablecolumns' => array(
+            'disabled' => 'hidden',
+            'starttime' => 'starttime',
+            'endtime' => 'endtime',
+            'fe_group' => 'fe_group',
+            'is_dummy_record' => 'is_dummy_record'
+        ),
+        'languageField' => 'sys_language_uid',
+        'transOrigPointerField' => 'l10n_parent',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
+        'versioningWS' => true,
+        'versioning_followPages' => true,
+        'origUid' => 't3_origuid',
+        'thumbnail' => 'image',
+        'iconfile' => 'EXT:me_media/Resources/Public/Icons/tx_memedia_domain_model_media.png'
+    ),
     'interface' => array(
         'showRecordFieldList' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,starttime,endtime,fe_group' .
             ',title,type'
     ),
-    'feInterface' => $TCA['tx_memedia_domain_model_media']['feInterface'],
     'columns' => array(
         't3ver_label' => array(
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.versionLabel',
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.versionLabel',
             'config' => array(
                 'type' => 'input',
                 'size' => '30',
@@ -24,7 +46,7 @@ $TCA['tx_memedia_domain_model_media'] = array(
         ),
         'hidden' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
             'config' => array(
                 'type' => 'check',
                 'default' => '0'
@@ -32,7 +54,7 @@ $TCA['tx_memedia_domain_model_media'] = array(
         ),
         'starttime' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
             'config' => array(
                 'type' => 'input',
                 'size' => '8',
@@ -44,7 +66,7 @@ $TCA['tx_memedia_domain_model_media'] = array(
         ),
         'endtime' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
             'config' => array(
                 'type' => 'input',
                 'size' => '8',
@@ -60,21 +82,21 @@ $TCA['tx_memedia_domain_model_media'] = array(
         ),
         'fe_group' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.fe_group',
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.fe_group',
             'config' => array(
                 'type' => 'select',
                 'items' => array(
                     array('', 0),
-                    array('LLL:EXT:lang/locallang_general.xml:LGL.hide_at_login', -1),
-                    array('LLL:EXT:lang/locallang_general.xml:LGL.any_login', -2),
-                    array('LLL:EXT:lang/locallang_general.xml:LGL.usergroups', '--div--')
+                    array('LLL:EXT:lang/locallang_general.xlf:LGL.hide_at_login', -1),
+                    array('LLL:EXT:lang/locallang_general.xlf:LGL.any_login', -2),
+                    array('LLL:EXT:lang/locallang_general.xlf:LGL.usergroups', '--div--')
                 ),
                 'foreign_table' => 'fe_groups'
             )
         ),
         'sys_language_uid' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:cms/locallang_ttc.xlf:sys_language_uid_formlabel',
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
             'config' => array(
                 'type' => 'select',
                 'foreign_table' => 'sys_language',
@@ -257,4 +279,4 @@ $TCA['tx_memedia_domain_model_media'] = array(
     )
 );
 
-$TCA['tx_memedia_domain_model_media']['ctrl']['requestUpdate'] .= ',type';
+$GLOBALS['TCA']['tx_memedia_domain_model_media']['ctrl']['requestUpdate'] .= ',type';

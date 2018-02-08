@@ -12,7 +12,6 @@ use MoveElevator\MeMedia\Domain\Model\Media;
  */
 class MediaController extends ActionController
 {
-
     const HTTP_STATUSCODE_NOT_FOUND = 404;
 
     /**
@@ -37,8 +36,8 @@ class MediaController extends ActionController
     }
 
     /**
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
-     * @return void
      */
     public function initializeShowAction()
     {

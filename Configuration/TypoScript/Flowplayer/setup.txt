@@ -1,10 +1,8 @@
 page {
-	# Add CSS
 	includeCSS {
 		flowplayer-layout = EXT:me_media/Resources/Public/js/libs/flowplayer-5.4.6/skin/minimalist.css
 	}
 
-	# Add JS
 	includeJSFooter {
 		flowplayer = EXT:me_media/Resources/Public/js/libs/flowplayer-5.4.6/flowplayer.js
 	}

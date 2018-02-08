@@ -11,7 +11,12 @@
 	<i class="fa fa-volume-up visible-print-block"></i><br/>
 	<audio controls>
 		<f:if condition="{0: record.file.originalResource.originalFile.properties.mime_type} == {0: 'application/octet-stream'}">
-			<source src="{record.file.originalResource.publicUrl}" type="audio/mpeg">
+			<f:then>
+				<source src="{record.file.originalResource.publicUrl}" type="audio/mpeg">
+			</f:then>
+			<f:else>
+				<source src="{record.file.originalResource.publicUrl}" type="{record.file.originalResource.originalFile.properties.mime_type}">
+			</f:else>
 		</f:if>
 	</audio>
 </div>

@@ -12,7 +12,6 @@ use MoveElevator\MeMedia\Domain\Model\Media\Movie;
  */
 class Video extends Movie
 {
-
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      */
@@ -20,6 +19,7 @@ class Video extends Movie
 
     /**
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $fileList
+     *
      * @return void
      */
     public function setFileList(ObjectStorage $fileList)

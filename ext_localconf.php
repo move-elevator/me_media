@@ -8,8 +8,8 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('extbase')) {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
         'MoveElevator.' . $_EXTKEY,
         'List',
-        array('Media' => 'list, show'),
-        array()
+        ['Media' => 'list, show'],
+        []
     );
 }
 
@@ -17,12 +17,12 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('extbase')) {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
         'MoveElevator.' . $_EXTKEY,
         'Show',
-        array('Media' => 'show'),
-        array()
+        ['Media' => 'show'],
+        []
     );
 }
 
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['tx_memedia_domain_model_media'][0] = array(
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['cms']['db_layout']['addTables']['tx_memedia_domain_model_media'][0] = [
     'fList' => 'title',
     'icon' => true
-);
+];
