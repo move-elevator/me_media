@@ -1,6 +1,13 @@
 {
   "name": "move-elevator/me-media",
+  "description": "Media center to present audio and video file as well as internal streams and stream from external provider youtube, vimeo and my video.",
   "type": "typo3-cms-extension",
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "require": {
+    "php": ">=5.6"
+  },
   "require-dev": {
     "squizlabs/php_codesniffer": "1.5.5",
     "phploc/phploc": "2.0.6",
@@ -9,5 +16,15 @@
   },
   "config": {
     "bin-dir": "Build/bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "MoveElevator\\MeMedia\\": "Classes"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MoveElevator\\MeMedia\\Tests\\": "Tests"
+    }
   }
 }
