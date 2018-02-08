@@ -1,5 +1,5 @@
 #
-# Table structure for table 'tx_mevideostage_teaser'
+# Table structure for table 'tx_memedia_domain_model_media'
 #
 CREATE TABLE tx_memedia_domain_model_media (
 	uid int(11) NOT NULL auto_increment,
@@ -29,7 +29,7 @@ CREATE TABLE tx_memedia_domain_model_media (
 	width int(11) DEFAULT '0' NOT NULL,
 	height int(11) DEFAULT '0' NOT NULL,
 
-	is_dummy_record int(11) DEFAULT '0' NOT NULL
+	is_dummy_record int(11) DEFAULT '0' NOT NULL,
 
 	t3ver_oid int(11) DEFAULT '0' NOT NULL,
 	t3ver_id int(11) DEFAULT '0' NOT NULL,
@@ -46,6 +46,6 @@ CREATE TABLE tx_memedia_domain_model_media (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 
 	PRIMARY KEY (uid),
-	KEY parent (pid)
+	KEY parent (pid),
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid)
 );
