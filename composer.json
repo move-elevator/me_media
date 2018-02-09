@@ -9,13 +9,40 @@
     "php": ">=5.6"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "1.5.5",
-    "phploc/phploc": "2.0.6",
-    "phpmd/phpmd": "2.1.1",
-    "sebastian/phpcpd": "2.0.1"
+    "tm/tooly-composer-script": "1.2.5",
+    "typo3/cms": "^7.6"
   },
-  "config": {
-    "bin-dir": "Build/bin"
+  "scripts": {
+    "post-install-cmd": "Tooly\\ScriptHandler::installPharTools",
+    "post-update-cmd": "Tooly\\ScriptHandler::installPharTools"
+  },
+  "extra": {
+    "tools": {
+      "phpunit": {
+        "url": "https://phar.phpunit.de/phpunit-5.7.9.phar",
+        "force-replace": true
+      },
+      "phpmd": {
+        "url": "https://github.com/mi-schi/phpmd-extension/releases/download/stable/phpmd-extension.phar",
+        "force-replace": true
+      },
+      "phpcs": {
+        "url": "https://github.com/squizlabs/PHP_CodeSniffer/releases/download/2.8.1/phpcs.phar",
+        "force-replace": true
+      },
+      "phpcpd": {
+        "url": "https://phar.phpunit.de/phpcpd.phar",
+        "force-replace": true
+      },
+      "pdepend": {
+        "url": "http://static.pdepend.org/php/latest/pdepend.phar",
+        "force-replace": true
+      },
+      "phpmetrics": {
+        "url": "https://github.com/phpmetrics/PhpMetrics/raw/master/build/phpmetrics.phar",
+        "force-replace": true
+      }
+    }
   },
   "autoload": {
     "psr-4": {
